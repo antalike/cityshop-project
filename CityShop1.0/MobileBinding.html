@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="format-detection" content="email=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /> 
+	<title>城市超市—美食爱好者的嘉年华</title>
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" href="css/style.mobile.css" />
+</head>
+<body id="profile">
+	<div id="page">
+		<header id="header" class="header">
+			<h1 class="headline">绑定手机号码</h1>
+			<a href="javascript:void(0);" class="btn-go-back">返回</a>
+			<!-- 导航栏显示在底部 -->
+			<nav id="nav-h" class="nav">
+				<a class="item" href="index.html"><i class="icon-home"></i>首页</a>
+				<a class="item" href="category.html"><i class="icon-list"></i>分类</a>
+				<a class="item" href="cart.html"><i class="icon-cart"><span class="cart-num">99</span></i>购物车</a>
+				<a class="item current" href="profile.html"><i class="icon-user"></i>我的账户</a>
+			</nav>
+		</header>
+		<main id="main"class="main">
+			<div class="main-wrapper">
+                <div class="form-group">
+                    <!-- 已绑定 -->
+                    <div class="control-group">
+                        <div class="control">
+                            <div class="label"><label for="telephone">手机号</label></div>
+                            <div class="field"><input id="telephone" class="input-text" readonly="readonly" type="tel" name="telephone" value="133****1234" maxlength="11" /><a href="MobileBinding2.html" class="btn-change">更换</a></div>
+                        </div>  
+                    </div>
+
+                    <!-- 未绑定 -->
+                    <form action="" id="binding-form" autocomplete="off">
+                        <div class="control-group">
+                            <div class="control">
+                                <div class="label"><label for="telephone">手机号</label></div>
+                                <div class="field"><input id="telephone" class="input-text required telephone" type="tel" name="telephone" placeholder="请输入手机号" maxlength="11" /></div>
+                            </div>
+                            <!-- 验证码 -->
+                            <div class="control">
+                                <div class="label"><label for="captcha">验证码</label></div>
+                                <div class="field">
+                                    <input id="captcha" class="input-text required" type="number" name="captcha" placeholder="请输入验证码" />
+                                    <a href="javascript:void(0);" class="btn-getCaptcha">发送验证码</a>
+                                </div>
+                            </div>    
+                        </div>
+                        <div class="error-message"></div>
+                        <div class="buttons">
+                            <input class="btn-submit" type="submit" value="确认绑定" />
+                        </div>
+                    </form>
+                </div>
+			</div>
+		</main>
+	</div>
+    <script type="text/javascript" src="js/jquery-1.12.2.min.js"></script>
+    <script type="text/javascript">
+        // $(document).ready(function(){
+        //     $('.form-group').each(function(){
+        //         var $this = $(this),
+        //             $required = $this.find('.required'),
+        //             $telephone = $this.find('.telephone'),
+        //             $btnSubmit = $this.find('.btn-submit'),
+        //             $btnGetCaptcha = $this.find('.btn-getCaptcha'),
+        //             $message = $this.find('.error-message');
+
+        //         init();
+
+        //         // 初始化
+        //         function init() {
+
+        //             if (!enableSubmit()) {
+        //                 $btnSubmit.attr('disabled', 'disabled').addClass('btn-disabled');
+        //             } else {
+        //                 $btnSubmit.removeAttr('disabled').removeClass('btn-disabled');
+        //             }
+
+        //             bindEvents();
+        //         }
+
+        //         // 事件绑定
+        //         function bindEvents() {
+        //             $required.on('input', function () {
+        //                 if (!enableSubmit()) {
+        //                     $btnSubmit.attr('disabled', 'disabled').addClass('btn-disabled');
+        //                 } else {
+        //                     $btnSubmit.removeAttr('disabled').removeClass('btn-disabled');
+        //                 }
+        //             });
+
+        //             // 发送验证码
+        //             $btnGetCaptcha.on('click', function(){
+        //                 var telephone = $telephone.val();
+
+        //                 if (telephone.length <= 0) {
+        //                     $message.html('* 请输入手机号码').css('visibility', 'visible');
+        //                     $telephone.focus();
+        //                     return false;
+        //                 }
+
+        //                 if (!validate_tel(telephone)) {
+        //                     $message.html('* 请输入有效的手机号码').css('visibility', 'visible');
+        //                     $telephone.focus();
+        //                     return false;
+        //                 }
+
+        //             })
+        //         }
+
+        //         // 必填选项是否填写
+        //         function enableSubmit() {
+        //             var enable = false;
+
+        //             for (var i = 0; i < $required.length; i++) {
+        //                 if ($required.eq(i).val().length <= 0) {
+        //                     return false;
+        //                 }
+
+        //                 enable = true;
+        //             }
+
+        //             return enable;
+        //         }
+
+        //         // 验证码倒计时
+        //         function countDown(time) {
+        //             var value = time;
+        //             if (time == 0) {
+        //                 $btnGetCaptcha.val('发送验证码').removeClass('btn-disabled').removeAttr('disabled');
+        //                 time = value;
+        //                 return false;
+        //             } else {
+        //                 $btnGetCaptcha.val('重新发送(' + time + '秒)').addClass('btn-disabled').attr('disabled', 'disabled');
+        //                 time--;
+        //             }
+
+        //             setTimeout(function () {
+        //                 countDown(time)
+        //             }, 1000)
+        //         }
+
+        //         // 手机号码验证
+        //         function validate_tel(value) {
+        //             return /^(0|86|17951)?(13[0-9]|15[012356789]|17[0678]|18[0-9]|14[57])[0-9]{8}$/.test(value)
+        //         }
+
+        //         $(':input[placeholder]').each(function () {
+        //             var self = $(this), txt = self.attr('placeholder');
+
+        //             self.on('focus', function () {
+        //                 if (self.val().length <= 0) {
+        //                     self.attr('placeholder', '');
+        //                 }
+        //             })
+
+        //             self.on('blur', function () {
+        //                 if (self.val().length <= 0) {
+        //                     self.attr('placeholder', txt);
+        //                 }
+        //             })
+        //         })
+
+        //     })
+        // })
+    </script>
+</body>
+</html>

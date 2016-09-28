@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>订单</title>
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/owl.carousel.css" />
+	<link rel="stylesheet" href="css/wechat.common.css" />
+	<link rel="stylesheet" href="css/wechat.style.css" />
+</head>
+<body>
+	<div id="page">
+		<div id="main">
+			<div class="container">
+				<div class="order-nav">
+					<a href="javascript:void(0);" class="current"><span>全部</span></a>
+					<a href="javascript:void(0);"><span>待付款</span></a>
+					<a href="javascript:void(0);"><span>待处理</span></a>
+					<span class="track"></span>		
+				</div>
+				<div class="orders-wrapper">
+					<!-- If 订单为空 -->
+					<!-- <div class="panel">
+						<div class="panel-body">
+							<div class="thumbnail"><img src="images/order-empty.png" alt="订单为空" width="90"></div>
+							<div class="caption">您还没有相关的订单</div>
+						</div>
+					</div> -->
+					<!-- Else -->
+					<div class="orders-list">
+						<div class="order-block">
+							<div class="meta">
+								<span class="time">2015-12-12</span>
+								<span class="id">订单号：45933320000</span>
+								<span class="status">处理中</span>
+								<i class="fa fa-angle-right"></i>
+							</div>
+							<div class="products">
+								<div class="owl-carousel">
+									<div class="item"><img src="http://www.cityshop.com.cn/Content/Images/Product/mega/20952297.jpg" width="100%" alt="台湾柠檬"></div>
+									<div class="item"><img src="http://www.cityshop.com.cn/Content/Images/Product/mega/20176907.jpg" width="100%" alt=""></div>
+									<div class="item"><img src="http://www.cityshop.com.cn/Content/Images/Product/mega/20785147.jpg" width="100%" alt="金吉达奶油生菜"></div>
+									<div class="item"><img src="http://www.cityshop.com.cn/Content/Images/Product/mega/20176136.jpg" width="100%" alt="城市甜玉米"></div>
+									<div class="item"><img src="http://www.cityshop.com.cn/Content/Images/Product/mega/20164164.jpg" width="100%" alt="台湾柠檬"></div>
+									<div class="item"><img src="http://www.cityshop.com.cn/Content/Images/Product/mega/20702373.jpg" width="100%" alt="金伯利红牌澳洲谷饲西冷薄片"></div>
+									<div class="item"><img src="http://www.cityshop.com.cn/Content/Images/Product/mega/20912543.jpg" width="100%" alt="芦潮港小米鱼"></div>
+								</div>
+							</div>
+							<div class="summary">
+								<span class="amount">共7件商品</span>
+								<span class="price">¥ 112.00</span>
+							</div>
+						</div>
+						<div class="order-block">
+							<div class="meta">
+								<span class="time">2015-12-12</span>
+								<span class="id">订单号：45933320000</span>
+								<span class="status">待付款</span>
+								<i class="fa fa-angle-right"></i>
+							</div>
+							<div class="products">
+								<div class="owl-carousel">
+									<div class="item"><img src="http://www.cityshop.com.cn/Content/Images/Product/mega/20952297.jpg" width="100%" alt="台湾柠檬"></div>
+									<div class="item"><img src="http://www.cityshop.com.cn/Content/Images/Product/mega/20176907.jpg" width="100%" alt=""></div>
+								</div>
+							</div>
+							<div class="summary">
+								<span class="amount">共7件商品</span>
+								<span class="price">¥ 112.00</span>
+							</div>
+						</div>
+						<div class="order-block">
+							<div class="meta">
+								<span class="time">2015-12-12</span>
+								<span class="id">订单号：45933320000</span>
+								<span class="status">交易成功</span>
+								<i class="fa fa-angle-right"></i>
+							</div>
+							<div class="products">
+								<div class="owl-carousel">
+									<div class="item"><img src="http://www.cityshop.com.cn/Content/Images/Product/mega/20176136.jpg" width="100%" alt="城市甜玉米"></div>
+									<div class="item"><img src="http://www.cityshop.com.cn/Content/Images/Product/mega/20164164.jpg" width="100%" alt="台湾柠檬"></div>
+									<div class="item"><img src="http://www.cityshop.com.cn/Content/Images/Product/mega/20702373.jpg" width="100%" alt="金伯利红牌澳洲谷饲西冷薄片"></div>
+									<div class="item"><img src="http://www.cityshop.com.cn/Content/Images/Product/mega/20912543.jpg" width="100%" alt="芦潮港小米鱼"></div>
+								</div>
+							</div>
+							<div class="summary">
+								<span class="amount">共7件商品</span>
+								<span class="price">¥ 112.00</span>
+							</div>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/owl.carousel.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.order-nav').each(function(){
+				var $nav = $(this).find('a'),
+					$track = $(this).find('.track');
+
+				var current = 0,
+					width = 0,
+					left = 0;
+
+				init();
+
+				$nav.on('click', function(){
+					current = $(this).index();
+					var meta = position(current);
+					$track.stop().animate({'width': meta.width, 'left': meta.left}, 300)
+				})
+
+				function init(){
+					var meta = position(current)
+					$track.css({'width': meta.width, 'left': meta.left });
+				}
+
+				function position(current) {
+					width = $nav.eq(current).find('span').width();
+					left = $nav.eq(current).find('span').position().left;
+					return { width: width, left: left }
+				}
+			})
+
+			$('.order-block .meta').on('click', function(){
+				var url = 'order_detail.html';
+				window.location.href = url;
+			})
+
+			$('.order-block .products .owl-carousel').owlCarousel({
+				loop: false,
+				pullDrag: false,
+				dots: false,
+				nav: false,
+				responsive:{
+					0:{
+						items:3,
+						margin: 5
+					},
+					321: {
+						items:4,
+						margin: 5
+					},
+					768:{
+						items:6,
+						margin: 10
+					}
+				}
+			})
+		})
+	</script>
+</body>
+</html>

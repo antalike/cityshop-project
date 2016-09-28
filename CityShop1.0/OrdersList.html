@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="format-detection" content="email=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /> 
+	<title>我的订单</title>
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" href="css/owl.carousel.css" />
+	<link rel="stylesheet" href="css/style.mobile.css" />
+</head>
+<body>
+	<div id="page">
+		<!-- Header -->
+		<div id="header" class="header">
+			<a href="javascript:history.go(-1);" class="btn-go-back icon icon-left-arrow">返回</a>
+			<h1 class="headline">我的订单</h1>
+		</div>
+		<!-- End -->
+
+		<!-- Nav -->
+		<div id="nav-h" class="nav">
+			<a class="item" href="index.html"><i class="icon-home"></i>首页</a>
+			<a class="item" href="category.html"><i class="icon-list"></i>分类</a>
+			<a class="item" href="cart.html"><i class="icon-cart"><span id="cart-num" class="cart-num">0</span></i>购物车</a>
+			<a class="item current" href="profile.html"><i class="icon-user"></i>我的账户</a>
+		</div>
+		<!-- END -->
+
+		<!-- Main -->
+		<div id="main" class="main">
+			<div class="main-wrapper">
+				<div class="orders">
+			        <div class="orders-block">
+	                    <div class="order-block" data-orderid="16090200003">
+	                        <div class="meta">
+	                            <div class="date">2016/9/2 10:33:43</div>
+	                            <div class="number">订单号：16090200003</div>
+	                            <span class="status">等待配货</span>
+	                        </div>
+							<div class="products-image owl-carousel">
+								<img src="http://www.cityshop.com.cn/Content/Images/Product/mega/20268176.jpg" alt="台湾凤梨">
+								<img src="http://www.cityshop.com.cn/Content/Images/Product/mega/20968618.jpg" alt="金山优质草莓">
+								<img src="http://www.cityshop.com.cn/Content/Images/Product/mega/20403263.jpg" alt="城市菜苋">
+								<img src="http://www.cityshop.com.cn/Content/Images/Product/mega/20971724.jpg" alt="德里克牌纯牛奶">
+								<img src="http://www.cityshop.com.cn/Content/Images/Product/mega/20944575.jpg" alt="艾伯丝牌黄油">
+								<img src="http://www.cityshop.com.cn/Content/Images/Product/mega/20982447.jpg" alt="芝麻薄脆">
+							</div>				           
+	                        <div class="action">
+	                            <div class="summary">
+	                                <div class="summary">共6件商品，总额 <b>¥ 83.30</b></div>
+	                            </div>
+	                            <div class="buttons"></div>
+	                        </div>
+			            </div>
+			            <div class="order-block" data-orderid="16090200002">
+	                        <div class="meta">
+	                            <div class="date">2016/9/2 10:32:05</div>
+	                            <div class="number">订单号：16090200002</div>
+	                            <span class="status">已完成</span>
+	                        </div>
+							<div class="products-image owl-carousel">
+			                    <img src="http://www.cityshop.com.cn/Content/Images/Product/mega/20892951.jpg" alt="金伯利红牌澳洲谷饲牛肉西冷整包">
+			                </div>				           
+	                        <div class="action">
+	                            <div class="summary">
+	                                <div class="summary">共1件商品，总额 <b>¥ 448.00</b></div>
+	                            </div>
+	                            <div class="buttons"><input type="submit" class="btn-delete" value="删除订单"></div>
+	                        </div>
+	                    </div>
+	                    <div class="order-block" data-orderid="16090200001">
+	                        <div class="meta">
+	                            <div class="date">2016/9/2 10:31:28</div>
+	                            <div class="number">订单号：16090200001</div>
+	                            <span class="status" style="color: #8b0e04;">已提交</span>
+	                        </div>
+							<div class="products-image owl-carousel">
+								<img src="http://www.cityshop.com.cn/Content/Images/Product/mega/20926601.jpg" alt="蓝莓(2盒装)">
+								<img src="http://www.cityshop.com.cn/Content/Images/Product/mega/20759858.jpg" alt="南汇8424西瓜">
+							</div>			           
+	                        <div class="action">
+	                            <div class="summary">
+	                                <div class="summary">共2件商品，总额 <b>¥ 110.00</b></div>
+	                            </div>
+	                            <div class="buttons">
+	                                <input type="submit" class="btn-paynow" value="现在付款">
+	                            </div>
+	                        </div>
+	                    </div>
+					</div>
+			    </div>
+			</div>
+		</div>
+		<!-- End -->
+
+        <a id="toTop" class="icon-totop" href="javascript:void(0);">toTop</a>
+        <div id="message-box"></div>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="js/site.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.order-block .products-image').owlCarousel({
+				loop: false,
+				dots: false,
+				nav: false,
+				responsive:{
+					0:{
+						items:3,
+						margin: 5
+					},
+					321: {
+						items:4,
+						margin: 5
+					},
+					768:{
+						items:6,
+						margin: 10
+					}
+				}
+			})
+
+			$('.order-block').on('click', function(){
+				window.location.href="OrderDetail.html";
+			})
+		})
+	</script>
+</body>
+</html>

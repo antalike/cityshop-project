@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>会员申请</title>
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/jquery-ui.css" />
+	<link rel="stylesheet" href="css/wechat.common.css" />
+	<link rel="stylesheet" href="css/wechat.member.css" />
+</head>
+<body class="background">
+	<div id="page">
+		<div id="main">
+					<div class="controls-group">
+						<div class="common-form2">
+							<form action="" id="signup-form" autocomplete="off">
+								<div class="control">
+									<label for="realName" class="label">*姓名</label>
+									<div class="field">
+										<input id="realName" class="input-txt required" type="text" name="realName" placeholder="必填" data-message="请输入姓名" />
+										<p class="error-message"></p>
+									</div>
+								</div>
+								<div class="control">
+									<label for="spellName" class="label">姓名拼音</label>
+									<div class="field">
+										<input id="spellName" class="input-txt" type="text" name="spellName" />
+									</div>
+								</div>
+								<div class="control">
+									<label for="birthday" class="label">*出生日期</label>
+									<div class="field">
+										<input id="birthday" class="input-txt required" type="text" name="birthday" placeholder="必填" readonly="readonly" data-message="请选择出生日期" />
+										<p class="error-message"></p>
+									</div>
+								</div>
+								<div class="control">
+									<label for="" class="label">*性别</label>
+									<div class="field">
+										<input id="female" class="input-radio" type="radio" name="sex" checked="checked" />
+										<label for="female">男</label>
+										<input id="male" class="input-radio" type="radio" name="sex" />
+										<label for="male">女</label>
+									</div>
+								</div>
+								<div class="control">
+									<label for="IDType" class="label">*证件类型</label>
+									<div class="field">
+										<select class="IDType" name="IDType" id="IDType">
+											<option value="">身份证</option>
+											<option value="">护照</option>
+											<option value="">港澳通行证</option>
+										</select>
+									</div>
+								</div>
+								<div class="control">
+									<label for="IDNumber" class="label">*证件号码</label>
+									<div class="field">
+										<input id="IDNumber" class="input-txt required" type="text" name="IDNumber" placeholder="必填" data-message="请输入证件号码" />
+										<p class="error-message"></p>
+									</div>
+								</div>
+								<div class="control">
+									<label for="citizenship" class="label">*国籍</label>
+									<div class="field">
+										<input id="citizenship" class="input-txt required" type="text" name="citizenship" placeholder="必填" data-message="请输入国籍" />
+										<p class="error-message"></p>
+									</div>
+								</div>
+								<div class="control">
+									<label for="" class="label">*所在地区</label>
+									<div class="field">
+										<select class="region" id="province" name="province" data-message="请选择所在地区">
+											<option value="0">--请选择省--</option>
+											<option value="1">上海</option>
+											<option value="2">江苏</option>
+											<option value="3">浙江</option>
+											<option value="4">北京</option>
+										</select>
+										<select class="region" id="city" name="city" data-message="请选择所在地区">
+											<option value="0">--请选择市--</option>
+											<option value="1">上海</option>
+										</select>
+										<select class="region" id="district" name="district" data-message="请选择所在地区">
+											<option value="0">--请选择区--</option>
+											<option value="1">浦东新区</option>
+											<option value="3">卢湾区</option>
+											<option value="8">黄浦区</option>
+											<option value="9">静安区</option>
+											<option value="10">徐汇区</option>
+											<option value="11">长宁区</option>
+											<option value="12">闵行区</option>
+											<option value="13">青浦区</option>
+											<option value="14">松江区</option>
+											<option value="15">金山区</option>
+											<option value="16">普陀区</option>
+											<option value="17">宝山区</option>
+											<option value="18">闸北区</option>
+											<option value="19">虹口区</option>
+											<option value="20">杨浦区</option>
+											<option value="21">嘉定区</option>
+											<option value="22">奉贤区</option>
+											<option value="23">崇明县</option>
+										</select>
+										<p class="error-message"></p>
+									</div>
+								</div>
+								<div class="control">
+									<label for="" class="label">*地址</label>
+									<div class="field">
+										<textarea name="addr" id="addr" cols="20" rows="5" placeholder="必填" class="required"  data-message="请输入地址"></textarea>
+										<p class="error-message"></p>
+									</div>
+								</div>
+								<div class="control">
+									<label for="postcode" class="label">*邮编</label>
+									<div class="field">
+										<input id="postcode" class="input-txt required" type="text" name="postcode" placeholder="必填" data-message="请输入邮编" />
+										<p class="error-message"></p>
+									</div>
+								</div>
+								<div class="control">
+									<label for="fixedPhone" class="label">固定电话</label>
+									<div class="field">
+										<input id="fixedPhone" class="input-txt" type="text" name="fixedPhone" />
+									</div>
+								</div>
+								<div class="control">
+									<label for="telephone" class="label">*手机号码</label>
+									<div class="field">
+										<input id="telephone" class="input-txt required" type="tel" name="telephone" placeholder="必填" data-message="请输入手机号码" />
+										<p class="error-message"></p>
+									</div>
+								</div>
+								<div class="control">
+									<label for="captcha" class="label">*验证码</label>
+									<div class="field">
+										<input id="captcha" class="captcha input-txt required" type="number" name="captcha" placeholder="必填"  data-message="请输入验证码" />
+										<button class="btn-get-captcha">获取</button>
+										<p class="error-message"></p>
+									</div>
+								</div>
+								<div class="checkboxes">
+									<div class="control"><input type="checkbox"  id="iOptionEmail" class="input-checkbox" name="iOptionEmail"><label for="iOptionEmail">请将关于商店促销，活动等信息的电子邮件发送给我</label></div>
+									<div class="control"><input type="checkbox" id="iAgree" class="input-checkbox" name="iAgree" checked="checked" ><label for="iAgree">我已经阅读并同意 <a href="javascript:void(0);" class="trigger-popup">城市超市会员手册</a></label></div>
+								</div>
+								<div class="buttons">
+									<div class="control">
+										<input class="button btn-signup btn-orange" type="submit" value="注册" />	
+									</div>
+								</div>
+							</form>
+						</div>	
+					</div>
+		</div>
+	</div>
+	<div id="popup-box">
+		<a href="javascript:void(0);" class="btn-close icon icon-close"></a>
+		<iframe class="iframe-handbook" src="member_handbook.html" frameborder="0"></iframe>
+	</div>
+	<div id="message-box">
+		<p class="hint"><i class="icon icon-close"></i>注册失败</p>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/signup.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			function preventDefault(e) {
+	            e = e || window.event;
+	            e.preventDefault && e.preventDefault();
+	            e.returnValue = false;
+	        }
+
+	        function stopPropagation(e){
+				e = e || window.event;
+				e.stopPropagation && e.stopPropagation();
+				e.cancelBubble = false;
+	        }
+
+	        function innerScroll(e){
+	        	// 阻止冒泡到document
+	        	// document上已经preventDefault
+	        	stopPropagation(e);
+
+				var delta = e.wheelDelta || e.detail || 0;
+				var box = $(this).get(0);
+
+				if($(box).height() + box.scrollTop >= box.scrollHeight){
+					if(delta < 0) {
+						preventDefault(e);
+						return false;
+					}
+				}
+				if(box.scrollTop === 0){
+					if(delta > 0) {
+						preventDefault(e);
+						return false;
+					}
+				}
+				// 会阻止原生滚动
+				// return false;
+	        }
+
+	        var disableScroll = function(){
+				$(document).on('mousewheel', preventDefault);
+				$(document).on('touchmove', preventDefault);
+			};
+
+			var enableScroll = function(){
+				$(document).off('mousewheel', preventDefault);
+				$(document).off('touchmove', preventDefault);
+			};
+
+			// bind
+			$('.trigger-popup').on('click', function(){
+				$('#popup-box').show();
+
+				// 内部可滚
+				$('#popup-box').on('mousewheel', innerScroll);
+
+				// 外部禁用
+				disableScroll();
+			})
+			$('#popup-box .btn-close').on('click', function(e){
+				$('#popup-box').hide();
+				enableScroll();
+			});
+
+			
+			// 移动端touch重写
+			var startX, startY;
+			$('#popup-box').on('touchstart', function(e){
+				startX = e.changedTouches[0].pageX;
+				startY = e.changedTouches[0].pageY;
+			});
+
+			// 仿innerScroll方法
+			$('#popup-box').on('touchmove', function(e){
+				e.stopPropagation();
+
+				var deltaX = e.changedTouches[0].pageX - startX;
+				var deltaY = e.changedTouches[0].pageY - startY;
+
+				// 只能纵向滚
+				if(Math.abs(deltaY) < Math.abs(deltaX)){
+					e.preventDefault();
+					return false;
+				}
+
+				var box = $(this).get(0);
+
+				if($(box).height() + box.scrollTop >= box.scrollHeight){
+					if(deltaY < 0) {
+						e.preventDefault();
+						return false;
+					}
+				}
+				if(box.scrollTop === 0){
+					if(deltaY > 0) {
+						e.preventDefault();
+						return false;
+					}
+				}
+				// 会阻止原生滚动
+				// return false;
+			});
+		})
+	</script>
+</body>
+</html>

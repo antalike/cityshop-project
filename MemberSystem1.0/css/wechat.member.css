@@ -1,0 +1,493 @@
+.fa-angle-right {
+	position: relative;
+	cursor: pointer;
+}
+.fa-angle-right:before {
+	position: absolute;
+    top: 50%;
+    right: 12px;
+    margin-top: -12px;
+    font-size: 2.2em;
+    color: #898989;
+}
+
+.common-form{
+	max-width: 360px;
+	margin: 0 auto;
+	padding: 15px;
+	box-sizing: border-box
+}
+.common-form ::-webkit-input-placeholder { 
+	color:#fff
+}
+.common-form .field {
+	position: relative;
+	margin-bottom: 6px
+}
+.common-form .field .fa{
+	position: absolute;
+	top: 0;
+	left: 10px;
+	width: 20px;
+	line-height: 32px;
+	text-align: center;
+	color: #fff;
+}
+.common-form .field .fa-mobile-phone {
+	font-size: 2.4em;
+}
+.common-form .field .fa-paper-plane {
+	font-size: 1.4em;
+}
+.common-form .field .fa-credit-card-alt {
+	font-size: 1.2em
+}
+.common-form .field .fa-lock {
+	font-size: 1.7em
+}
+.common-form .field .input-txt {
+	width: 100%;
+	height: 32px;
+	padding: 0 10px 0 36px;
+	font-size: 1.2em;
+	color: #fff;
+	background-color: rgba(52, 45,46,.2);
+	border: none;
+	border-radius: 16px;
+	outline: none;
+	box-sizing: border-box
+}
+.common-form .field .btn-get-captcha {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 90px;
+	height: 32px;
+	padding: 0;
+	font-size: 1.2em;
+	line-height: 32px;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	background-color: #5490cc;
+	border: none;
+	border-radius: 0 16px 16px 0;
+	outline: none
+}
+.common-form .error-messages {
+	padding-left: 10px;
+	font-size: 1.2em;
+	line-height: 1.5em;
+	color: #fff
+}
+.common-form .buttons{
+	margin-top: 40px;
+}
+.common-form .btn-disabled { 
+	color: #b5cce7 !important;
+	background-color: #76a6d6 !important;
+	opacity: 1
+}
+
+.control-group .links a {
+	font-size: 1.2em;
+	color: #fff;
+	text-decoration: none;
+}
+.control-group .signup-link {
+	margin-top: 80px;
+	text-align: center;
+}
+.control-group .signup-link a {
+	display: inline-block;
+	padding: 10px 12px;
+	border-top: 1px solid rgba(255,255,255,.5)
+}
+
+
+.common-form2{
+	max-width: 480px;
+	margin: 0 auto;
+	padding: 30px 0 60px;
+	box-sizing: border-box
+}
+.common-form2 .control {
+	overflow: hidden;
+	margin: 0 10px 15px;
+}
+.common-form2 .label {
+	float: left;
+	width: 55px;
+	font-size: 1.2em;
+	line-height: 30px;
+	text-align: right;
+	color: #fff;
+}
+.common-form2 .field {
+	overflow: hidden;
+	position: relative;
+	margin-left: 65px;
+}
+.common-form2 .field .input-txt,
+.common-form2 .field textarea,
+.common-form2 .field select {
+	font-size: 1.2em;
+	color: #434343;
+	background-color: #fff;
+	border: none;
+	border-radius: 15px;
+	outline: none;
+	box-sizing: border-box
+}
+.common-form2 .field .input-txt {
+	width: 100%;
+	height: 30px;
+	padding: 0 15px;
+	vertical-align: middle;
+}
+.common-form2 .field textarea {
+	width: 100%;
+	padding: 8px 10px;
+	line-height: 1.5em;
+	resize: none;
+}
+.common-form2 .field select {
+	height: 30px;
+	padding: 0 15px;
+	border-radius: 15px;
+}
+.common-form2 .field .IDType {
+	width: 100%;
+}
+.common-form2 .field .region {
+	float: left;
+	width: 100%;
+	margin-bottom: 8px
+}
+.common-form2 .field .captcha {
+	padding-right: 105px
+}
+.common-form2 .field .btn-get-captcha {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 90px;
+	height: 30px;
+	padding: 0;
+	font-size: 1.2em;
+	line-height: 30px;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	background-color: #f39800;
+	border: none;
+	border-radius: 0 15px 15px 0;
+	outline: none
+}
+.common-form2 .input-radio + .ui-button {
+	display: inline-block;
+	margin-top: 4px;
+	margin-right: 15px
+}
+.common-form2 .ui-icon-radio + .ui-button-text {
+	display: inline-block;
+	font-size: 1.2em;
+	line-height: 21px;
+	color: #fff;
+	cursor: pointer;
+}
+.common-form2 .checkboxes{
+	padding: 8px 10px;
+	font-size: 1.2em;
+	line-height: 15px;
+	color: #fff;
+	background-color: rgba(0,0,0,.1);
+}
+.common-form2 .error-message {
+	margin: 5px 5px 0 15px;
+	font-size: 1.2em;
+	color: #fff;
+	clear: both
+}
+.common-form2 .checkboxes .control{
+	margin: 8px 0;
+}
+.common-form2 .checkboxes .control a {
+	color: #f39800;
+	text-decoration: none;
+	border-bottom: 1px solid #f39800
+}
+.common-form2 .buttons {
+	overflow: hidden;
+	margin-top: 40px;
+}
+.common-form2 .btn-disabled {
+	color: #fdf0de !important;
+	background-color: #f9cb7f !important
+}
+.common-form2 .btn-save,
+.common-form2 .btn-cancel {
+	float: left;
+	width: 48%;
+	margin-left: 2%;
+}
+
+
+.account .meta {
+	padding: 40px 0 20px;
+	text-align: center;
+	color: #fff;
+	background-color: #8a011e
+}
+.account .meta .thumbnail {
+	width: 156px;
+	margin: 0 auto 20px;
+}
+.account .meta .nickname {
+	position: relative;
+	margin-bottom: 10px;
+	font-size: 1.6em;
+	
+}
+.account .meta .icon-level {
+	position: absolute;
+    top: -2px;
+    padding-left: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #f99500;
+}
+.account .meta .level span {
+	display: inline-block;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 1.3em;
+	line-height: 1em;
+	border-left: 1px solid rgba(255,255,255,.5)
+}
+.account .meta .level span:first-child{
+	border-left: none;
+}
+
+.account .card {
+	margin-bottom: 10px;
+	padding: 8px 35px 8px 15px;
+	background-color: #fff;
+	border-bottom: 1px solid #e0e0e0;
+	cursor: pointer;
+}
+.account .card .media-right {
+	width: 60px
+}
+.account .card .media-body {
+	vertical-align: middle;
+}
+.account .card p {
+	margin: 0;
+	line-height: 1.5em;
+}
+.account .card .ID-number {
+	font-size: 1.6em;
+	font-weight: bold;
+	color: #363636
+}
+.account .card  .caption {
+	font-size: 1.3em;
+	color: #aaa;
+}
+
+
+.menu {
+	background-color: #fff;
+	border-bottom: 1px solid #e0e0e0
+}
+.menu ul{
+	margin: 0;
+	padding-left: 0;
+	list-style: none;
+}
+.menu li a {
+	display: block;
+	font-size: 1.3em;
+	color: #363636;
+	text-decoration: none;
+}
+
+.account .h-menu ul{
+	overflow: hidden;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+.account .h-menu li {
+	float: left;
+	width: 33.33%;
+	padding: 6px 0;
+	text-align: center;
+	border-left: 1px solid #e0e0e0;
+	box-sizing: border-box
+}
+.account .h-menu li:first-child{
+	border-left-color: transparent;
+}
+.account .h-menu li i {
+	display: block;
+	margin: 0 auto 6px;
+}
+
+.v-menu li {
+	position: relative;
+	border-top: 1px solid #e0e0e0
+}
+.v-menu li a{
+	padding: 10px 35px 10px 10px;
+	line-height: 19px;
+}
+.v-menu li i {
+	margin-right: 8px;
+}
+
+
+.code-wrapper {
+	width: 80%;
+	max-width: 320px;
+	margin: 60px auto 0;
+	
+	box-sizing: border-box;
+}
+.code-wrapper .bar-code {
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 8px 8px 0 0;
+}
+.code-wrapper .bar-code .number {
+	margin: 10px 0 0;
+	font-size: 1.6em;
+	font-weight: bold;
+	text-align: center;
+}
+.code-wrapper .qr-code {
+	padding: 30px 20px;
+	text-align: center;
+	background-color: #f6f6f6;
+	border-radius: 0 0 8px 8px;
+}
+.code-wrapper .qr-code img {
+	width: 70%;
+}
+
+
+
+.iframe-handbook {
+	width: 100%;
+	height: 100%
+}
+
+.member-handbook article {
+	margin: 20px 10px;
+}
+.member-handbook article > h1 {
+	margin: 0 0 8px;
+	font-size: 1.5em;
+}
+.member-handbook section {
+	margin: 10px 0;
+	font-size: 1.3em;
+	line-height: 1.5em;
+}
+.member-handbook section > h2 {
+	margin: 0 0 6px;
+	font-size: 1em;
+}
+.member-handbook p,
+.member-handbook ol,
+.member-handbook li {
+	margin: 0 0 5px;
+}
+.member-handbook ul,
+.member-handbook ol {
+	padding-left: 1.5em;
+}
+.member-handbook ul {
+	list-style: disc;
+}
+.member-handbook table {
+	width: 100%;
+}
+.member-handbook table th,
+.member-handbook table td {
+	padding: 4px 6px;
+	border: 1px solid #898989
+}
+.member-handbook .para {
+	text-indent: 2em;
+}
+
+.bill-block {
+	position: relative;
+	padding: 10px 15px;
+	background-color: #fff;
+	border-bottom: 1px solid #e0e0e0;
+}
+.bill-block a {
+	display: block;
+	color: #363636;
+	text-decoration: none
+}
+.bill-block p {
+	margin: 3px 0;
+	line-height: 1.5em;
+}
+.bill-block .type {
+	font-size: 1.4em;
+	color: #363636
+}
+.bill-block .balance {
+	font-size: 1.2em;
+}
+.bill-block .date {
+	font-size: 1.2em;
+}
+.bill-block .amount {
+	position: absolute;
+	top: 50%;
+	right: 15px;
+	transform: translateY(-50%);
+	font-size: 2em;
+}
+.bill-block .income {
+	color: #8a011e
+}
+
+.bill-info .meta {
+	padding: 7px 15px;
+	background-color: #fff;
+	border-bottom: 1px solid #e0e0e0
+}
+.bill-info .meta p {
+	margin: 8px 0;
+}
+.bill-info .meta .label,
+.bill-info .meta .value {
+	font-size: 1.3em;
+}
+.bill-info .meta .label {
+	color: #898989
+}
+.bill-info .meta1 p {
+	line-height: 2em;
+}
+.bill-info .meta1 .amount {
+	font-size: 2em;
+}
+
+
+@media screen and (max-width: 320px) {
+	.common-form2 .field .region {
+		width: 100%;
+		margin-left: 0;
+	}
+}
+
+
+
+

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="format-detection" content="email=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /> 
+	<title>城市超市—美食爱好者的嘉年华</title>
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" href="css/owl.carousel.css" />
+	<link rel="stylesheet" href="css/style.mobile.css" />
+</head>
+<body id="homepage">
+	<div id="page">
+		<!-- Header -->
+		<div id="header" class="header">
+			<h1 class="logo"><a href="./">城市超市CityShop</a></h1>
+			<div class="header-right">
+				<a class="link-login" href="login.html"><span class="label">登录</span></a>
+			</div>
+			<div class="search">
+				<form action="" id="search-form" autocomplete="off">
+					<input type="text" id="keywords" name="keywords" class="input-text" placeholder="请输入关键字" />
+					<i class="icon-search"></i>
+				</form>
+			</div>
+		</div>
+		<!-- End -->
+
+		<!-- Nav -->
+		<div id="nav-h" class="nav">
+			<a class="item current" href="index.html"><i class="icon-home"></i>首页</a>
+			<a class="item" href="category.html"><i class="icon-list"></i>分类</a>
+			<a class="item" href="cart.html"><i class="icon-cart"><span id="cart-num" class="cart-num">0</span></i>购物车</a>
+			<a class="item" href="profile.html"><i class="icon-user"></i>我的账户</a>
+		</div>
+		<!-- End -->
+
+		<!-- Main -->
+		<div id="main" class="main">
+			<div class="main-wrapper">
+				<!-- Slides广告位 -->
+				<div class="slides owl-carousel">
+					<a href="javascript:void(0);"><img alt="banner title" src="images/banner/slide1.jpg" width="100%" /></a>
+					<a href="javascript:void(0);"><img alt="banner title" src="images/banner/slide2.jpg" width="100%" /></a>
+					<a href="javascript:void(0);"><img alt="banner title" src="images/banner/slide3.jpg" width="100%" /></a>
+				</div>
+				<!-- 结束 -->
+
+				<div class="box-homepage">
+					<div class="box-heading">
+						<h1 class="headline">最当季</h1>
+					</div>
+					<div class="box-content">
+						<div class="products-s1 owl-carousel">
+							<div class="product-block">
+								<div class="image"><a href="ProductDetail.html"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20984342.jpg" alt="澳橙(6个装)"></a></div>
+								<div class="meta">
+									<p class="name"><a href="ProductDetail.html">澳橙(6个装)</a></p>
+									<p class="price">¥ 30.00<a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></p>
+								</div>
+							</div>
+							<div class="product-block">
+								<div class="image"><a href="ProductDetail.html"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20953553.jpg" alt="新西兰黄心猕猴桃(6个装)"></a></div>
+								<div class="meta">
+									<p class="name"><a href="ProductDetail.html">新西兰黄心猕猴桃(6个装)</a></p>
+									<p class="price">¥ 50.00<a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></p>
+								</div>
+							</div>
+							<div class="product-block">
+								<div class="image"><a href="ProductDetail.html"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20277444.jpg" alt="城市葡萄"></a></div>
+								<div class="meta">
+									<p class="name"><a href="ProductDetail.html">城市葡萄</a></p>
+									<p class="price">¥ 15.00<a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></p>
+								</div>
+							</div>
+							<div class="product-block">
+								<div class="image"><a href="ProductDetail.html"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20945985.jpg" alt="西柚(4个装)"></a></div>
+								<div class="meta">
+									<p class="name"><a href="ProductDetail.html">西柚(4个装)</a></p>
+									<p class="price">¥ 28.00<a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></p>
+								</div>
+							</div>
+							<div class="product-block">
+								<div class="image"><a href="ProductDetail.html"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20951740.jpg" alt="红心猕猴桃(6只装)"></a></div>
+								<div class="meta">
+									<p class="name"><a href="ProductDetail.html">红心猕猴桃(6只装)</a></p>
+									<p class="price">¥ 35.00<a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></p>
+								</div>
+							</div>
+							<div class="product-block">
+								<div class="image"><a href="ProductDetail.html"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20827519.jpg" alt="卡美坡优选无花果"></a></div>
+								<div class="meta">
+									<p class="name"><a href="ProductDetail.html">卡美坡优选无花果</a></p>
+									<p class="price">¥ 28.00<a class="btn-add-to-cart" href="javascript:void(0);" onclick="addToCart(20827519,1,28.00,1)">加入购物车</a></p>
+								</div>
+							</div>
+						</div>
+						<div id="m_banner1">
+							<ul style="overflow:hidden">
+								<li style="float:left;width:33.33%"><a href="ProductDetail.html"><img alt="金枕头榴莲" src="http://www.cityshop.com.cn/Content/Images/Category/Banner/Mobile/0617ThailandDurian_cn.jpg" width="100%"></a></li>
+								<li style="float:left;width:33.33%"><a href="/Store/Search?Keywords=发芽牌"><img alt="发芽牌正宗希腊酸奶" src="http://www.cityshop.com.cn/Content/Images/Category/Banner/Mobile/160901FageYogurt_cn.1.jpg" width="100%"></a></li>
+								<li style="float:left;width:33.33%"><a href="ProductDetail.html"><img alt="慢烤牛排" src="http://www.cityshop.com.cn/Content/Images/Category/Banner/Mobile/0817Slowroastbeef_cn.jpg" width="100%"></a></li>
+							</ul>
+						</div>
+						<div class="products-s1 owl-carousel">
+							<div class="product-block">
+								<div class="image"><a href="ProductDetail.html"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20980283.jpg" alt="圣马赫堂红葡萄酒"></a></div>
+								<div class="icon-promo"><span class="icon-sale"><i>买2送1</i></span></div>
+								<div class="meta">
+									<p class="name"><a href="ProductDetail.html">圣马赫堂红葡萄酒</a></p>
+									<p class="price">¥ 168.00<a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></p>
+								</div>
+							</div>
+							<div class="product-block">
+								<div class="image"><a href="ProductDetail.html"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20967406.jpg" alt="兹德鲁伊牌充气天然矿泉水"></a></div>
+								<div class="icon-promo"><span class="icon-sale"><i>买5送1</i></span></div>
+								<div class="meta">
+									<p class="name"><a href="ProductDetail.html">兹德鲁伊牌充气天然矿泉水</a></p>
+									<p class="price">¥ 9.90<a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></p>
+								</div>
+							</div>
+							<div class="product-block">
+								<div class="image"><a href="ProductDetail.html"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20950255.jpg" alt="奥布里花园牌起泡柠檬苹果汁(碳酸饮料)"></a></div>
+								<div class="icon-promo"><span class="icon-sale"><i>特惠</i></span></div>
+								<div class="meta">
+									<p class="name"><a href="ProductDetail.html">奥布里花园牌起泡柠檬苹果汁(碳酸饮料)</a></p>
+									<p class="price">¥ 68.00<a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></p>
+								</div>
+							</div>
+							<div class="product-block">
+								<div class="image"><a href="ProductDetail.html"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20849511.jpg" alt="维达格拉纳牌石榴汁"></a></div>
+								<div class="icon-promo"><span class="icon-sale"><i>特惠</i></span></div>
+								<div class="meta">
+									<p class="name"><a href="ProductDetail.html">维达格拉纳牌石榴汁</a></p>
+									<p class="price">¥ 50.00<a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></p>
+								</div>
+							</div>
+							<div class="product-block">
+								<div class="image"><a href="ProductDetail.html"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20968700.jpg" alt="青研牌苹果汁"></a></div>
+								<div class="icon-promo"><span class="icon-sale"><i>买1送1</i></span></div>
+								<div class="meta">
+									<p class="name"><a href="ProductDetail.html">青研牌苹果汁</a></p>
+									<p class="price">¥ 58.00<a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></p>
+								</div>
+							</div>
+							<div class="product-block">
+								<div class="image"><a href="ProductDetail.html"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20967383.jpg" alt="野牛牌金色啤酒"></a></div>
+								<div class="icon-promo"><span class="icon-sale"><i>买3送1</i></span></div>
+								<div class="meta">
+									<p class="name"><a href="ProductDetail.html">野牛牌金色啤酒</a></p>
+									<p class="price">¥ 10.00<a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></p>
+								</div>
+							</div>
+						</div>
+						<div class="products-s1 owl-carousel">
+							<div class="product-block">
+								<div class="image"><a href="ProductDetail.html"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20959494.jpg" alt="慢烤牛排"></a></div>
+								<div class="meta">
+									<p class="name"><a href="ProductDetail.html">慢烤牛排</a></p>
+									<p class="price">¥ 30.00<a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></p>
+								</div>
+							</div>
+							<div class="product-block">
+								<div class="image"><a href="ProductDetail.html"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20643980.jpg" alt="托斯卡纳色拉"></a></div>
+								<div class="meta">
+									<p class="name"><a href="ProductDetail.html">托斯卡纳色拉</a></p>
+									<p class="price">¥ 26.00<a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></p>
+								</div>
+							</div>
+							<div class="product-block">
+								<div class="image"><a href="ProductDetail.html"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20985011.jpg" alt="拉法卷"></a></div>
+								<div class="meta">
+									<p class="name"><a href="ProductDetail.html">拉法卷</a></p>
+									<p class="price">¥ 15.00<a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></p>
+								</div>
+							</div>
+							<div class="product-block">
+								<div class="image"><a href="ProductDetail.html"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20947811.jpg" alt="巧克力手工曲奇"></a></div>
+								<div class="meta">
+									<p class="name"><a href="ProductDetail.html">巧克力手工曲奇</a></p>
+									<p class="price">¥ 22.00<a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></p>
+								</div>
+							</div>
+							<div class="product-block">
+								<div class="image"><a href="ProductDetail.html"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20979522.jpg" alt="城市榴莲蛋糕(个)"></a></div>
+								<div class="meta">
+									<p class="name"><a href="ProductDetail.html">城市榴莲蛋糕(个)</a></p>
+									<p class="price">¥ 43.00<a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 分类选 -->
+				<div class="box-homepage mb10">
+				    <div class="box-heading">
+					    <h1 class="headline">分类选</h1>
+					</div>
+					<div class="box-content">
+			            <div class="category-nav">
+			                <ul class="items">
+                            	<li class="item col-2"><a href="category.html"><img src="http://www.cityshop.com.cn/Content/Images/Category/Source/mobile/aCategory1.jpg" alt="水果 / 蔬菜" width="100%"></a></li>
+                            	<li class="item col-2"><a href="category.html"><img src="http://www.cityshop.com.cn/Content/Images/Category/Source/mobile/aCategory64.jpg" alt="畜禽水产" width="100%"></a></li>
+                            	<li class="item col-2"><a href="category.html"><img src="http://www.cityshop.com.cn/Content/Images/Category/Source/mobile/aCategory63.jpg" alt="奶制品" width="100%"></a></li>
+                            	<li class="item col-2"><a href="category.html"><img src="http://www.cityshop.com.cn/Content/Images/Category/Source/mobile/aCategory68.jpg" alt="酒类" width="100%"></a></li>
+                            	<li class="item col-4"><a href="category.html"><img src="http://www.cityshop.com.cn/Content/Images/Category/Source/mobile/aCategory62.jpg" alt="豆制品" width="100%"></a></li>
+                            	<li class="item col-4"><a href="category.html"><img src="http://www.cityshop.com.cn/Content/Images/Category/Source/mobile/aCategory66.jpg" alt="水 / 饮料" width="100%"></a></li>
+                            	<li class="item col-4"><a href="category.html"><img src="http://www.cityshop.com.cn/Content/Images/Category/Source/mobile/aCategory69.jpg" alt="营养早餐食品" width="100%"></a></li>
+                            	<li class="item col-4"><a href="category.html"><img src="http://www.cityshop.com.cn/Content/Images/Category/Source/mobile/aCategory73.jpg" alt="休闲食品" width="100%"></a></li>
+                            	<li class="item col-4"><a href="category.html"><img src="http://www.cityshop.com.cn/Content/Images/Category/Source/mobile/aCategory70.jpg" alt="调味品" width="100%"></a></li>
+                            	<li class="item col-4"><a href="category.html"><img src="http://www.cityshop.com.cn/Content/Images/Category/Source/mobile/aCategory71.jpg" alt="粮油杂货" width="100%"></a></li>
+                            	<li class="item col-4"><a href="category.html"><img src="http://www.cityshop.com.cn/Content/Images/Category/Source/mobile/aCategory75.jpg" alt="城市自制" width="100%"></a></li>
+                            	<li class="item col-4"><a href="category.html"><img src="http://www.cityshop.com.cn/Content/Images/Category/Source/mobile/aCategory79.jpg" alt="家居日用" width="100%"></a></li>
+			                </ul>
+			            </div>
+			        </div>
+			    </div>
+			    END
+
+			    <div class="box-homepage">
+				    <div class="box-heading">
+					    <h1 class="headline">觅好货</h1>
+					</div>
+					<div class="box-content">
+			            <div id="products-hot" class="cs-products">
+			                <div class="products-toolbar">
+						        <ul class="items">
+							        <li class="item current" data-tag="IsRecommend"><a href="javascript:void(0);">热销单品</a></li>
+								    <li class="item" data-tag="IsNewArrival"><a href="javascript:void(0);">新品到货</a></li>
+								    <li class="item" data-tag="HasPromotion"><a href="javascript:void(0);">促销品专区</a></li>
+							    </ul>
+			                </div>
+			                <div id="m_banner4"><a href="/store/cmscontent/zh-cn/m_2016FrenchBaguette"><img src="http://www.cityshop.com.cn/Content/Images/Category/Banner/Mobile/160616FrenchBaguette_Flash_cn.jpg" width="100%"></a></div>
+			                <div class="products-grid">
+			                    <div class="products-block">
+			                    	<div class="product-block">
+			                    		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20953553.jpg" alt="新西兰黄心猕猴桃(6个装)"></div>
+			                    		<div class="icon-promo"><span class="icon-hot"><i>热销</i></span></div>
+			                    		<div class="name"><a href="ProductDetail.html">新西兰黄心猕猴桃(6个装)</a></div>
+			                    		<div class="meta"><span class="price">¥ 50.00</span><span class="spec">6个</span></div>
+			                    		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			                    	</div>
+			                    	<div class="product-block">
+			                    		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20515584.jpg" alt="唯品纯牛乳"></div>
+			                    		<div class="icon-promo"><span class="icon-hot"><i>热销</i></span></div>
+			                    		<div class="name"><a href="ProductDetail.html">唯品纯牛乳</a></div>
+			                    		<div class="meta"><span class="price">¥ 24.50</span><span class="spec">1L</span></div>
+			                    		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			                    	</div>
+			                    	<div class="product-block biglink">
+			                    		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20959494.jpg" alt="慢烤牛排"></div>
+			                    		<div class="icon-promo"><span class="icon-hot"><i>热销</i></span></div>
+			                    		<div class="name"><a href="ProductDetail.html">慢烤牛排</a></div>
+			                    		<div class="meta"><span class="price">¥ 30.00</span><span class="spec">约250g/盒</span></div>
+			                    		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			                    	</div>
+			                    	<div class="product-block biglink">
+			                    		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20252151.jpg" alt="榴莲拼盘"></div>
+			                    		<div class="icon-promo"><span class="icon-hot"><i>热销</i></span></div>
+			                    		<div class="name"><a href="ProductDetail.html">榴莲拼盘</a></div>
+			                    		<div class="meta"><span class="price">¥ 47.60</span><span class="spec">约350g/盒</span></div>
+			                    		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			                    	</div>
+			                    	<div class="product-block biglink">
+			                    		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20982973.jpg" alt="城市香葱拉发饼"></div>
+			                    		<div class="icon-promo"><span class="icon-hot"><i>热销</i></span></div>
+			                    		<div class="name"><a href="ProductDetail.html">城市香葱拉发饼</a></div>
+			                    		<div class="meta"><span class="price">¥ 15.00</span><span class="spec">包</span></div>
+			                    		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			                    	</div>
+			                    	<div class="product-block biglink">
+			                    		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20326487.jpg" alt="美式原味烤鸡(整只熟)"></div>
+			                    		<div class="icon-promo"><span class="icon-hot"><i>热销</i></span></div>
+			                    		<div class="name"><a href="ProductDetail.html">美式原味烤鸡(整只熟)</a></div>
+			                    		<div class="meta"><span class="price">¥ 38.00</span><span class="spec">只</span></div>
+			                    		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			                    	</div>
+			                    	<div class="product-block biglink">
+			                    		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20168292.jpg" alt="金枕头榴莲"></div>
+			                    		<div class="icon-promo"><span class="icon-hot"><i>热销</i></span></div>
+			                    		<div class="name"><a href="ProductDetail.html">金枕头榴莲</a></div>
+			                    		<div class="meta"><span class="price">¥ 87.50</span><span class="spec">约2.5kg/个</span></div>
+			                    		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			                    	</div>
+			                    	<div class="product-block biglink">
+			                    		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20825973.jpg" alt="城市拉发饼"></div>
+			                    		<div class="icon-promo"><span class="icon-hot"><i>热销</i></span></div>
+			                    		<div class="name"><a href="ProductDetail.html">城市拉发饼</a></div>
+			                    		<div class="meta"><span class="price">¥ 12.00</span><span class="spec">包</span></div>
+			                    		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			                    	</div>
+			                    	<div class="product-block biglink">
+			                    		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20968809.jpg" alt="尊乐百搭车达肠"></div>
+			                    		<div class="icon-promo"><span class="icon-hot"><i>热销</i></span></div>
+			                    		<div class="name"><a href="ProductDetail.html">尊乐百搭车达肠</a></div>
+			                    		<div class="meta"><span class="price">¥ 37.00</span><span class="spec">260g</span></div>
+			                    		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			                    	</div>
+			                    	<div class="product-block biglink">
+			                    		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20309114.jpg" alt="金伯利红牌澳洲谷饲牛腱子肉"></div>
+			                    		<div class="icon-promo"><span class="icon-hot"><i>热销</i></span></div>
+			                    		<div class="name"><a href="ProductDetail.html">金伯利红牌澳洲谷饲牛腱子肉</a></div>
+			                    		<div class="meta"><span class="price">¥ 89.00</span><span class="spec">约500g/盒</span></div>
+			                    		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			                    	</div>
+			                    	<div class="product-block biglink">
+			                    		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20959593.jpg" alt="城市蛋卷(芝麻味)"></div>
+			                    		<div class="icon-promo"><span class="icon-hot"><i>热销</i></span></div>
+			                    		<div class="name"><a href="ProductDetail.html">城市蛋卷(芝麻味)</a></div>
+			                    		<div class="meta"><span class="price">¥ 20.00</span><span class="spec">包</span></div>
+			                    		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			                    	</div>
+			                    	<div class="product-block biglink">
+			                    		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20849917.jpg" alt="银鳕鱼(冷冻)"></div>
+			                    		<div class="icon-promo"><span class="icon-hot"><i>热销</i></span></div>
+			                    		<div class="name"><a href="ProductDetail.html">银鳕鱼(冷冻)</a></div>
+			                    		<div class="meta"><span class="price">¥ 156.00</span><span class="spec">约400g/盒</span></div>
+			                    		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			                    	</div>
+			                    	<div class="product-block biglink">
+			                    		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20949655.jpg" alt="城市蛋卷(原味)"></div>
+			                    		<div class="icon-promo"><span class="icon-hot"><i>热销</i></span></div>
+			                    		<div class="name"><a href="ProductDetail.html">城市蛋卷(原味)</a></div>
+			                    		<div class="meta"><span class="price">¥ 18.00</span><span class="spec">包</span></div>
+			                    		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			                    	</div>
+			                    	<div class="product-block biglink">
+			                    		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20223649.jpg" alt="基围虾"></div>
+			                    		<div class="icon-promo"><span class="icon-hot"><i>热销</i></span></div>
+			                    		<div class="name"><a href="ProductDetail.html">基围虾</a></div>
+			                    		<div class="meta"><span class="price">¥ 36.30</span><span class="spec">约330g/盒</span></div>
+			                    		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			                    	</div>
+			                    	<div class="product-block biglink">
+			                    		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20025731.jpg" alt="金伯利红牌澳洲谷饲牛臀肉糜100％"></div>
+			                    		<div class="icon-promo"><span class="icon-hot"><i>热销</i></span></div>
+			                    		<div class="name"><a href="ProductDetail.html">金伯利红牌澳洲谷饲牛臀肉糜100％</a></div>
+			                    		<div class="meta"><span class="price">¥ 34.50</span><span class="spec">约250g/盒</span></div>
+			                    		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			                    	</div>
+			                    	<div class="product-block biglink">
+			                    		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20875244.jpg" alt="泰森冷鲜鸡大胸"></div>
+			                    		<div class="icon-promo"><span class="icon-hot"><i>热销</i></span></div>
+			                    		<div class="name"><a href="ProductDetail.html">泰森冷鲜鸡大胸</a></div>
+			                    		<div class="meta"><span class="price">¥ 17.00</span><span class="spec">500g</span></div>
+			                    		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			                    	</div>
+			                    	<div class="product-block biglink">
+			                    		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20875237.jpg" alt="泰森冰鲜翅中(小托盘)"></div>
+			                    		<div class="icon-promo"><span class="icon-hot"><i>热销</i></span></div>
+			                    		<div class="name"><a href="ProductDetail.html">泰森冰鲜翅中(小托盘)</a></div>
+			                    		<div class="meta"><span class="price">¥ 35.00</span><span class="spec">400g</span></div>
+			                    		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			                    	</div>
+			                    	<div class="product-block biglink">
+			                    		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20164027.jpg" alt="嘉品猪小排"></div>
+			                    		<div class="icon-promo"><span class="icon-hot"><i>热销</i></span></div>
+			                    		<div class="name"><a href="ProductDetail.html">嘉品猪小排</a></div>
+			                    		<div class="meta"><span class="price">¥ 26.60</span><span class="spec">约380g/盒</span></div>
+			                    		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			                    	</div>
+			                    	<div class="product-block biglink">
+			                    		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20601980.jpg" alt="冰鲜三文鱼中段"></div>
+			                    		<div class="icon-promo"><span class="icon-hot"><i>热销</i></span></div>
+			                    		<div class="name"><a href="ProductDetail.html">冰鲜三文鱼中段</a></div>
+			                    		<div class="meta"><span class="price">¥ 70.00</span><span class="spec">约250g/盒</span></div>
+			                    		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			                    	</div>
+			                    	<div class="product-block biglink">
+			                    		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20164195.jpg" alt="嘉品猪肋排(整块)"></div>
+			                    		<div class="icon-promo"><span class="icon-hot"><i>热销</i></span></div>
+			                    		<div class="name"><a href="ProductDetail.html">嘉品猪肋排(整块)</a></div>
+			                    		<div class="meta"><span class="price">¥ 43.20</span><span class="spec">约400g/盒</span></div>
+			                    		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			                    	</div>
+			                    </div>
+			                    <div class="loading"><a href="javascript:void(0);" class="btn-loading">上拉加载更多 &gt;&gt;</a></div>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+		</div>
+		<!-- End -->
+
+		<a id="toTop" class="icon-totop" href="javascript:void(0);">toTop</a>
+		<div id="message-box"></div> 
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="js/site.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('.slides').owlCarousel({
+				items: 1,
+				loop: true,
+				dots: true,
+				autoplay: true
+			});
+
+			$('.products-s1').owlCarousel({
+			    items: 3,
+			    loop: false,
+			    margin: 5,
+			    dots: false
+			});
+		})
+	</script>
+</body>
+</html>

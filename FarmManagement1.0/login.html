@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="format-detection" content="email=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /> 
+	<title>农业APP</title>
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body id="login">
+	<div id="page">
+        <div class="logo"><img src="images/logo.png" alt="城市超市Cityshop" width="100%"></div>
+        <div class="LoginFormWrapper">
+            <form class="LoginForm" autocomplete="off">
+                <div class="field">
+                    <input type="text" class="username" name="username" placeholder="用户名" />
+                </div>
+                <div class="field">
+                    <input type="text" class="password" name="password" placeholder="密码" />
+                </div>
+                <div class="button"><div class="errorMessage"></div><input class="login_btn" type="submit" value="登录"></div>
+            </form>
+        </div>
+	</div>
+    <script type="text/javascript" src="scripts/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="scripts/script.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            window.localStorage.clear();
+
+            $('.LoginForm').submit(function () {
+                var $this = $(this),
+                    $username = $this.find('.username'),
+                    $password = $this.find('.password'),
+                    $errorMessage = $this.find('.errorMessage');
+
+                if ($username.val().length <= 0) {
+                    $errorMessage.html('* 请输入用户名');
+                    $username.focus();
+                    return false;
+                }
+
+                if ($password.val().length <= 0) {
+                    $errorMessage.html('* 请输入密码');
+                    $password.focus();
+                    return false;
+                }
+
+                window.location.href = 'index.html';
+
+                return false;
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>会员账户</title>
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/wechat.common.css" />
+	<link rel="stylesheet" href="css/wechat.member.css" />
+</head>
+<body>
+	<div id="page">
+		<div id="main">
+			<div class="container">
+				<div class="account">
+					<div class="meta">
+						<div class="thumbnail"><img src="images/cityshop-logo-w.png" alt="城市超市CityShop" width="100%"></div>
+						<div class="nickname">城市超市<span class="icon-level">V1</span></div>
+						<div class="level"><span>等级：食友</span><span>积分：89</span></div>
+					</div>
+					<div class="menu h-menu">
+						<ul>
+							<li><a href="orders.html"><i class="icon icon-order"></i>订单</a></li>
+							<li><a href="account_balance.html"><i class="icon icon-yen"></i>余额：&yen; 0.00</a></li>
+							<li><a href="person_info.html"><i class="icon icon-user"></i>个人信息</a></li>
+						</ul>
+					</div>
+					<div class="card fa fa-angle-right">
+						<div class="media">
+							<div class="media-body">
+								<p class="ID-number">234599990008</p>
+								<p class="caption">使用时请出示给服务员</p>
+							</div>
+							<div class="media-right"><img src="images/QRCode.jpg" alt="二维码" width="60"></div>
+						</div>
+					</div>
+					<div class="menu v-menu">
+						<ul>
+							<li class="fa fa-angle-right"><a href="address.html"><i class="icon icon-map"></i>我的收货地址</a></li>
+							<li class="fa fa-angle-right"><a href="points.html"><i class="icon icon-heart"></i>积分查询</a></li>
+							<li class="fa fa-angle-right"><a href="store.html"><i class="icon icon-map2"></i>门店地址</a></li>
+							<li class="fa fa-angle-right"><a href="member_handbook.html"><i class="icon icon-hand"></i>会员手册</a></li>
+							<li class="fa fa-angle-right"><a href="contactus.html"><i class="icon icon-hand"></i>联系我们</a></li>
+						</ul>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.card').on('click', function(){
+				window.location.href="code.html";
+			})
+		})
+	</script>
+</body>
+</html>

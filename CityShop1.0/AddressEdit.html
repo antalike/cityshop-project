@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="format-detection" content="email=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /> 
+	<title>新增收货地址</title>
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" href="css/style.mobile.css" />
+</head>
+<body>
+	<div id="page">
+		<!-- Header -->
+		<div id="header" class="header">
+			<a href="javascript:history.go(-1);" class="btn-go-back icon icon-left-arrow">返回</a>
+			<h1 class="headline">新增收货地址</h1>
+		</div>
+		<!-- End -->
+
+		<!-- Nav -->
+		<div id="nav-h" class="nav">
+			<a class="item" href="index.html"><i class="icon-home"></i>首页</a>
+			<a class="item" href="category.html"><i class="icon-list"></i>分类</a>
+			<a class="item" href="cart.html"><i class="icon-cart"><span id="cart-num" class="cart-num">0</span></i>购物车</a>
+			<a class="item current" href="profile.html"><i class="icon-user"></i>我的账户</a>
+		</div>
+		<!-- END -->
+
+		<!-- Main -->
+		<div id="main" class="main">
+			<div class="main-wrapper">
+				<div class="form-group">
+		            <form id="addressEdit-form" autocomplete="off">
+					    <div class="control-group">
+						    <div class="control">
+	                            <div class="label"><label for="name">收货人</label></div>
+	                            <div class="field">
+								    <input class="input-text required" id="name" name="Address.RecipientName" placeholder="请输入收货人姓名" type="text" value="">
+							    </div>
+						    </div>
+						    <div class="control">
+							    <div class="label"><label for="phone">手机号码</label></div>
+							    <div class="field">
+								    <input class="input-text required" id="phone" maxlength="11" name="Address.CellPhone" placeholder="请输入手机号码" type="tel" value="">
+							    </div>	
+						    </div>
+						    <div class="control control-select">
+							    <div class="label"><label>所在地区</label></div>
+							    <div class="field">
+	                                <span class="selectValue">上海</span>					
+	                                <select class="province-select required" id="Address_ProvinceId" name="Address.ProvinceId"><option value="">---</option><option value="1">上海</option><option value="2">江苏</option><option value="3">浙江</option><option value="4">北京</option></select>
+	                            </div>
+	                            <div class="field">
+	                                <span class="selectValue">上海</span>
+	                                <select class="city-select required" id="Address_CityId" name="Address.CityId"><option value="">---</option><option value="1">上海</option></select>
+	                            </div>
+	                            <div class="field">
+	                                <span class="selectValue">静安区</span>
+	                                <select class="district-select required" id="Address_DistrictId" name="Address.DistrictId"><option value="">---</option><option value="1">浦东新区</option><option value="2">南汇区</option><option value="3">卢湾区</option><option value="8">黄浦区</option><option value="9">静安区</option><option value="10">徐汇区</option><option value="11">长宁区</option><option value="12">闵行区</option><option value="13">青浦区</option><option value="14">松江区</option><option value="15">金山区</option><option value="16">普陀区</option><option value="17">宝山区</option><option value="18">闸北区</option><option value="19">虹口区</option><option value="20">杨浦区</option><option value="21">嘉定区</option><option value="22">奉贤区</option><option value="23">崇明县</option></select>
+							    </div>
+						    </div>
+						    <div class="control">
+							    <div class="label"><label for="addr">街道地址</label></div>
+							    <div class="field">
+								    <textarea class="required" cols="20" id="addr" name="Address.DetailAddress" placeholder="请填写详细地址" rows="4"></textarea>
+	                            </div>	
+						    </div>	
+					    </div>
+					    <div class="control-group">
+						    <div class="control">
+	                            <input class="input-checkbox" id="iDefault" name="Address.IsDefault" type="checkbox" value="true"><input name="Address.IsDefault" type="hidden" value="false">
+							    <label for="iDefault" class="label-checkbox">设为默认地址</label>
+						    </div>
+					    </div>
+	                    <div class="error-message"></div>
+					    <div class="buttons">
+	                        <input class="btn-submit btn-disabled" type="submit" value="保存">
+	                    </div>
+	                </form>
+				</div>
+			</div>
+		</div>
+		<!-- End -->
+
+		<a id="toTop" class="icon-totop" href="javascript:void(0);">toTop</a>
+		<div id="message-box"></div> 
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/site.js"></script>
+	<script type="text/javascript" src="js/addresslist.js"></script>
+</body>
+</html>

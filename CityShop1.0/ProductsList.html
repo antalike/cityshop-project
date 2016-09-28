@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="format-detection" content="email=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /> 
+	<title>城市超市—美食爱好者的嘉年华</title>
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" href="css/style.mobile.css" />
+</head>
+<body id="products-list">
+	<div id="page">
+		<!-- Header -->
+		<div id="header" class="header">
+            <a href="javascript:history.go(-1);" class="btn-go-back icon icon-left-arrow">返回</a>
+			<div class="search">
+			    <form action="" id="search-form" autocomplete="off">
+			        <input type="text" id="keywords" name="keywords" class="input-text" placeholder="请输入关键字">
+					<i class="icon-search"></i>
+			    </form>
+			</div>
+			<div class="header-right"><a href="javascript:void(0);" class="trigger-filter">筛选</a></div>
+		</div>
+		<!-- End -->
+		
+		<!-- Nav -->
+		<div id="nav-h" class="nav">
+			<a class="item current" href="index.html"><i class="icon-home"></i>首页</a>
+			<a class="item" href="category.html"><i class="icon-list"></i>分类</a>
+			<a class="item" href="#"><i class="icon-cart"><span id="cart-num" class="cart-num">0</span></i>购物车</a>
+			<a class="item" href="#"><i class="icon-user"></i>我的账户</a>
+		</div>
+		<!-- End -->
+
+		<!-- Main -->
+		<div id="main" class="main">
+			<div class="main-wrapper">
+				<div class="cs-products">
+			        <div class="products-toolbar">
+			            <ul class="items">
+						    <li class="item btn-filter" data-tag="IsNewArrival"><a href="javascript:void(0);">新品</a></li>
+						    <li class="item btn-filter" data-tag="HasPromotion"><a href="javascript:void(0);">特惠</a></li>
+					    </ul>
+				        <ul class="items">
+					        <li class="item btn-order" data-tag="TotalSales"><a href="javascript:void(0);">销量</a></li>
+			                <li class="item btn-order" data-tag="UnitPrice" data-order="asc"><a href="javascript:void(0);">价格<i class="icon-sort"></i></a></li>
+			            </ul>
+				    </div>
+			        <div class="products-grid">
+			            <div class="products-block">
+			            	<div class="product-block">
+			            		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20168148.jpg" alt="绿心猕猴桃"></div>
+			            		<div class="name"><a href="ProductDetail.html">绿心猕猴桃</a></div>
+			            		<div class="meta"><span class="price">¥ 6.00</span><span class="spec">只</span></div>
+			            		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			            	</div>
+			            	<div class="product-block">
+			            		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20168216.jpg" alt="无籽西瓜"></div>
+			            		<div class="name"><a href="ProductDetail.html">无籽西瓜</a></div>
+			            		<div class="meta"><span class="price">¥ 30.00</span><span class="spec">约5kg/个</span></div>
+			            		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			            	</div>
+			            	<div class="product-block">
+			            		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20168025.jpg" alt="牛油果"></div><div class="icon-promo"><span class="icon-hot"><i>热销</i></span></div>
+			            		<div class="name"><a href="ProductDetail.html">牛油果</a></div>
+			            		<div class="meta"><span class="price">¥ 12.00</span><span class="spec">约170g/个</span></div>
+			            		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			            	</div>
+			            	<div class="product-block">
+			            		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20582364.jpg" alt="都乐香蕉"></div>
+			            		<div class="name"><a href="ProductDetail.html">都乐香蕉</a></div>
+			            		<div class="meta"><span class="price">¥ 13.50</span><span class="spec">约900克/6根</span></div>
+			            		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			            	</div>
+			            	<div class="product-block">
+			            		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20169589.jpg" alt="山东红富士"></div>
+			            		<div class="name"><a href="ProductDetail.html">山东红富士</a></div>
+			            		<div class="meta"><span class="price">¥ 10.50</span><span class="spec">2个/约500g</span></div>
+			            		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			            	</div>
+			            	<div class="product-block">
+			            		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20805104.jpg" alt="黄心猕猴桃"></div>
+			            		<div class="name"><a href="ProductDetail.html">黄心猕猴桃</a></div>
+			            		<div class="meta"><span class="price">¥ 10.00</span><span class="spec">个</span></div>
+			            		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			            	</div>
+			            	<div class="product-block">
+			            		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20630805.jpg" alt="西洲蜜瓜"></div>
+			            		<div class="name"><a href="ProductDetail.html">西洲蜜瓜</a></div>
+			            		<div class="meta"><span class="price">¥ 48.00</span><span class="spec">约4kg/个</span></div>
+			            		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			            	</div>
+			            	<div class="product-block">
+			            		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20168865.jpg" alt="火龙果"></div>
+			            		<div class="name"><a href="ProductDetail.html">火龙果</a></div>
+			            		<div class="meta"><span class="price">¥ 8.10</span><span class="spec">约450g/个</span></div>
+			            		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			            	</div>
+			            	<div class="product-block">
+			            		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20168407.jpg" alt="佳乐果"></div>
+			            		<div class="name"><a href="ProductDetail.html">佳乐果</a></div>
+			            		<div class="meta"><span class="price">¥ 14.40</span><span class="spec">约450g/盒约2个</span></div>
+			            		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			            	</div>
+			            	<div class="product-block">
+			            		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20167936.jpg" alt="椰青"></div>
+			            		<div class="name"><a href="ProductDetail.html">椰青</a></div>
+			            		<div class="meta"><span class="price">¥ 15.00</span><span class="spec">个</span></div>
+			            		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			            	</div>
+			            	<div class="product-block">
+			            		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20168155.jpg" alt="青蛇果"></div>
+			            		<div class="name"><a href="ProductDetail.html">青蛇果</a></div>
+			            		<div class="meta"><span class="price">¥ 11.20</span><span class="spec">2个/约350g</span></div>
+			            		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			            	</div>
+			            	<div class="product-block">
+			            		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20505028.jpg" alt="澳橙"></div>
+			            		<div class="name"><a href="ProductDetail.html">澳橙</a></div>
+			            		<div class="meta"><span class="price">¥ 6.00</span><span class="spec">个</span></div>
+			            		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			            	</div>
+			            	<div class="product-block">
+			            		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20370541.jpg" alt="红肉火龙果"></div>
+			            		<div class="name"><a href="ProductDetail.html">红肉火龙果</a></div>
+			            		<div class="meta"><span class="price">¥ 20.00</span><span class="spec">约500g/个</span></div>
+			            		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			            	</div>
+			            	<div class="product-block">
+			            		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20807849.jpg" alt="树上熟木瓜"></div>
+			            		<div class="name"><a href="ProductDetail.html">树上熟木瓜</a></div>
+			            		<div class="meta"><span class="price">¥ 16.00</span><span class="spec">千克</span></div>
+			            		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			            	</div>
+			            	<div class="product-block">
+			            		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20264970.jpg" alt="西柚(SA)"></div>
+			            		<div class="name"><a href="ProductDetail.html">西柚(SA)</a></div>
+			            		<div class="meta"><span class="price">¥ 7.50</span><span class="spec">个</span></div>
+			            		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			            	</div>
+			            	<div class="product-block">
+			            		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20170776.jpg" alt="尤力克柠檬(SA)"></div>
+			            		<div class="name"><a href="ProductDetail.html">尤力克柠檬(SA)</a></div>
+			            		<div class="meta"><span class="price">¥ 5.00</span><span class="spec">个</span></div>
+			            		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			            	</div>
+			            	<div class="product-block">
+			            		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20945985.jpg" alt="西柚(4个装)"></div>
+			            		<div class="name"><a href="ProductDetail.html">西柚(4个装)</a></div>
+			            		<div class="meta"><span class="price">¥ 28.00</span><span class="spec">4个(约1240克)</span></div>
+			            		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			            	</div>
+			            	<div class="product-block">
+			            		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20573218.jpg" alt="红心猕猴桃"></div>
+			            		<div class="name"><a href="ProductDetail.html">红心猕猴桃</a></div>
+			            		<div class="meta"><span class="price">¥ 7.00</span><span class="spec">个</span></div>
+			            		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			            	</div>
+			            	<div class="product-block">
+			            		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20168360.jpg" alt="哈密瓜"></div>
+			            		<div class="name"><a href="ProductDetail.html">哈密瓜</a></div>
+			            		<div class="meta"><span class="price">¥ 30.00</span><span class="spec">约2.5kg/个</span></div>
+			            		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			            	</div>
+			            	<div class="product-block">
+			            		<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20281687.jpg" alt="小青柠檬"></div>
+			            		<div class="name"><a href="ProductDetail.html">小青柠檬</a></div>
+			            		<div class="meta"><span class="price">¥ 9.80</span><span class="spec">约350g/盒</span></div>
+			            		<div class="action"><a class="btn-add-to-cart" href="javascript:void(0);">加入购物车</a></div>
+			            	</div>
+			            </div>
+			            <div class="loading"><a href="javascript:void(0);" class="btn-loading">上拉加载更多 &gt;&gt;</a></div>
+			        </div>
+			    </div>
+
+			    <!-- 筛选内容 -->
+			    <aside id="filter-shift">
+					<header class="header" style="width: 318.75px;">
+						<h1 class="headline">筛选</h1>
+						<a href="javascript:void(0);" class="btn-close">X</a>
+					</header>
+					<div class="main">
+						<div class="scroll-wrapper">
+							<form id="filter-form" autocomplete="off">
+								<div class="control-group">
+									<h2 class="title">价格</h2>
+									<div class="control control-price">
+										<label class="label">区间价(元)</label>
+										<div class="field"><input id="startPrice" class="input-text input-price" type="number" name="startPrice"><span>-</span><input id="endPrice" class="input-text input-price" type="number" name="endPrice">
+										</div>
+									</div>
+								</div>
+								<div class="control-group">
+									<h2 class="title">类别</h2>
+									<div class="control control-category">
+										<div class="field">
+											<input id="c0" class="input-radio2" type="radio" name="categoryType" value="0" checked="checked">
+											<label for="c0" class="label-radio2">全部</label>
+										</div>
+										<div class="field">
+											<input id="c6" name="categoryType" type="radio" class="input-radio2" value="6">
+											<label for="c6" class="label-radio2">苹果</label>
+										
+										</div>
+										<div class="field">
+											<input id="c7" name="categoryType" type="radio" class="input-radio2" value="7">
+											<label for="c7" class="label-radio2">梨</label>
+										</div>
+										<div class="field">
+											<input id="c85" name="categoryType" type="radio" class="input-radio2" value="85">
+											<label for="c85" class="label-radio2">瓜果</label>
+										</div>
+										<div class="field">
+											<input id="c86" name="categoryType" type="radio" class="input-radio2" value="86">
+											<label for="c86" class="label-radio2">浆果</label>
+										</div>
+										<div class="field">
+											<input id="c87" name="categoryType" type="radio" class="input-radio2" value="87">
+											<label for="c87" class="label-radio2">桃李</label>
+										</div>
+										<div class="field">
+											<input id="c88" name="categoryType" type="radio" class="input-radio2" value="88">
+											<label for="c88" class="label-radio2">热带水果</label>
+										</div>
+										<div class="field">
+											<input id="c89" name="categoryType" type="radio" class="input-radio2" value="89">
+											<label for="c89" class="label-radio2">葡萄</label>
+										</div>
+										<div class="field">
+											<input id="c90" name="categoryType" type="radio" class="input-radio2" value="90">
+											<label for="c90" class="label-radio2">其他</label>
+										</div>
+										<div class="field">
+											<input id="c494" name="categoryType" type="radio" class="input-radio2" value="494">
+											<label for="c494" class="label-radio2">柑橘柠檬</label>
+										</div>
+										<div class="field">
+											<input id="c578" name="categoryType" type="radio" class="input-radio2" value="578">
+											<label for="c578" class="label-radio2">冷冻水果</label>
+										</div>
+										<div class="field">
+											<input id="c748" name="categoryType" type="radio" class="input-radio2" value="748">
+											<label for="c748" class="label-radio2">台湾水果</label>
+										</div>
+									</div>
+								</div>
+								<div class="control-group">
+									<div class="control">
+										<div class="field">
+											<input id="isInStock" class="input-checkbox" type="checkbox" name="stock">
+											<label for="isInStock" class="label-checkbox">仅显示有库存</label>
+										</div>
+									</div>
+								</div>
+								<div class="buttons">
+									<input class="btn-reset" type="reset" value="重置">
+									<input class="btn-confirm" type="submit" value="确认">
+								</div>
+							</form>	
+						</div>
+					</div>
+				</aside>
+				<div class="modal-overlay"></div>
+				<!-- End -->
+			</div>
+		</div>
+		<!-- End -->
+
+		<a id="toTop" class="icon-totop" href="javascript:void(0);">toTop</a>
+		<div id="message-box"></div> 
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/site.js"></script>
+	<script type="text/javascript" src="js/productslist.js"></script>
+</body>
+</html>

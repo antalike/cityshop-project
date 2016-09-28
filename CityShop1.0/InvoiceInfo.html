@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="format-detection" content="email=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /> 
+	<title>发票信息</title>
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" href="css/style.mobile.css" />
+</head>
+<body>
+	<div id="page">
+		<!-- Header -->
+		<div id="header" class="header">
+            <a href="javascript:history.go(-1);" class="btn-go-back icon icon-left-arrow">返回</a>
+			<h1 class="headline">发票信息</h1>
+			<a href="javascript:void(0);" class="trigger-nav"></a>
+			<div id="nav-v" class="nav-s1">
+			    <div class="nav-wrapper">
+				    <a class="item" href="index.html"><i class="icon-home"></i>首页</a>
+					<a class="item" href="category.html"><i class="icon-list"></i>分类</a>
+					<a class="item" href="cart.html"><i class="icon-cart"></i>购物车</a>
+					<a class="item" href="profile.html"><i class="icon-user"></i>我的账户</a>	
+				</div>
+			</div>
+		</div>
+		<!-- End -->
+
+		<!-- Main -->
+		<div id="main" class="main">
+			<div class="main-wrapper">
+				<div id="InvoiceInfo">
+			        <div class="order-box">
+			            <div class="heading"><h2 class="title">发票类型</h2></div>
+					    <div class="control-group">
+						    <div class="control">
+							    <div class="field field-invoiceType">
+								    <input id="InvoiceTypeId_1" class="input-radio-s2" type="radio" name="InvoiceTypeId" value="1" data-invoicetype="NormalInvoiceInfo" checked="checked">
+								    <label for="InvoiceTypeId_1" class="label-radio-s2">普通发票</label>
+			                    </div>
+			                    <div class="field field-invoiceType">
+								    <input id="InvoiceTypeId_2" class="input-radio-s2" type="radio" name="InvoiceTypeId" value="2" data-invoicetype="VATInvoiceInfo">
+								    <label for="InvoiceTypeId_2" class="label-radio-s2">增值税发票</label>
+							    </div>
+						    </div>
+					    </div>
+			            <div id="NormalInvoiceInfo" class="InvoiceTypeContent" style="display: block;">
+					        <div class="heading"><h2 class="title">发票抬头</h2></div>
+					        <div class="control-group">
+						        <div class="control">
+							        <div class="field">
+								        <input id="InvoiceHeader_1" class="input-radio" type="radio" name="InvoiceHeaderId" value="1" checked="checked">
+								        <label for="InvoiceHeader_1" class="label-radio">个人</label>
+							        </div>
+							        <div class="field">
+								        <input id="InvoiceHeader_2" class="input-radio" type="radio" name="InvoiceHeaderId" value="2">
+								        <label for="InvoiceHeader_2" class="label-radio">公司</label>
+								        <input id="InvoiceHeader" type="text" class="input-text" name="InvoiceHeader" placeholder="请输入公司名称">
+							        </div>
+						        </div>
+					        </div>
+					        <div class="heading"><h2 class="title">发票内容</h2></div>
+					        <div class="control-group">
+						        <div class="control control-grid">
+							        <div class="field">
+								        <input id="InvoiceContentType_1" class="input-radio" type="radio" name="InvoiceContentType" value="1" checked="checked">
+								        <label for="InvoiceContentType_1" class="label-radio">食品</label>
+							        </div>
+							        <div class="field">
+								        <input id="InvoiceContentType_2" class="input-radio" type="radio" name="InvoiceContentType" value="2">
+								        <label for="InvoiceContentType_2" class="label-radio">日用品</label>
+							        </div>
+							        <div class="field">
+								        <input id="InvoiceContentType_3" class="input-radio" type="radio" name="InvoiceContentType" value="3">
+								        <label for="InvoiceContentType_3" class="label-radio">办公用品</label>
+							        </div>
+						        </div>
+					        </div>
+					        <div class="buttons">
+						        <a href="javascript:void(0);" class="btn-confirm">确认</a>
+					        </div>
+					        <div class="hints">
+						        说明：
+						        <ol>
+							        <li>发票金额为现金支付金额（扣除礼品卡余额、抵用券、返利金额等）；</li>
+							        <li>如有其它需求请拨打客服热线400-811-1797。</li>
+						        </ol>
+					        </div>
+			            </div>
+			            <div id="VATInvoiceInfo" class="InvoiceTypeContent" style="display: none;">
+						    <div class="control-group">
+							    <div class="control">
+								    <div class="label"><label for="InvoiceContentType">发票内容</label></div>
+								    <div class="field"><input id="InvoiceContentType" type="text" class="input-text required" name="InvoiceContentType" placeholder="仅可填写食品/日用品/办公用品" data-errormsg="请输入发票内容"></div>
+							    </div>
+							    <div class="control">
+								    <div class="label"><label for="CompanyName">公司名称</label></div>
+								    <div class="field"><input id="CompanyName" type="text" class="input-text required" name="CompanyName" placeholder="必填" data-errormsg="请输入公司名称"></div>
+							    </div>
+							    <div class="control">
+								    <div class="label"><label for="TaxPayerId">纳税人识别号</label></div>
+								    <div class="field"><input id="TaxPayerId" type="text" class="input-text required" name="TaxPayerId" placeholder="必填" data-errormsg="请输入纳税人识别号"></div>
+							    </div>
+							    <div class="control">
+								    <div class="label"><label for="CompanyAddress">公司地址</label></div>
+								    <div class="field"><input id="CompanyAddress" type="text" class="input-text required" name="CompanyAddress" placeholder="必填" data-errormsg="请输入公司地址"></div>
+							    </div>
+							    <div class="control">
+								    <div class="label"><label for="CompanyPhone">公司电话</label></div>
+								    <div class="field"><input id="CompanyPhone" type="text" class="input-text required" name="CompanyPhone" placeholder="必填" data-errormsg="请输入公司电话"></div>
+							    </div>
+							    <div class="control">
+								    <div class="label"><label for="BankName">开户行及账号</label></div>
+								    <div class="field"><input id="BankName" type="text" class="input-text required" name="BankName" placeholder="必填" data-errormsg="请输入开户行及账号"></div>
+							    </div>
+							    <div class="control">
+								    <div class="label"><label for="InvoicePostAddress">发票寄送地址</label></div>
+								    <div class="field"><input id="InvoicePostAddress" type="text" class="input-text required" name="InvoicePostAddress" placeholder="必填" data-errormsg="请输入发票寄送地址"></div>
+							    </div>
+						    </div>
+						    <div class="buttons">
+							    <a href="javascript:void(0);" class="btn-confirm">确认</a>
+						    </div>
+						    <div class="hints">
+							    说明：<br>如您需要开具增值税发票，烦请在订单提交之后将税务登记证副本、一般纳税人资格证副本、营业执照副本、经办人身份证复印件及联系方式加盖红章，快递或邮寄至“上海市康定路1469号1701室 城市超市客服中心（收）”（邮编为200042），并请在信封上注明“开具增值税发票”。
+						    </div>
+					    </div>
+			        </div>
+				</div>
+			</div>
+		</div>
+		<!-- End -->
+
+		<a id="toTop" class="icon-totop" href="javascript:void(0);">toTop</a>
+        <div id="message-box"></div>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/site.js"></script>
+	<script type="text/javascript">
+        $(document).ready(function () {
+            var selectedType = $('input[name="InvoiceTypeId"]:checked').data('invoicetype');
+            $('#' + selectedType).show();
+
+            $('input[name="InvoiceTypeId"]').on('change', function () {
+                selectedType = $(this).data('invoicetype');
+                $('.InvoiceTypeContent').hide();
+                $('#' + selectedType).show();
+            })
+
+            $('input[name="InvoiceHeaderId"]').on('change', function () {
+                if ($(this).val() == 1) {
+                    $('input[name="InvoiceHeader"]').hide();
+                    $('input[name="InvoiceHeader"]').next('label').css('width', '100%');
+                } else {
+                    $('input[name="InvoiceHeader"]').show();
+                    $('input[name="InvoiceHeader"]').prev('label').css('width', 'auto');
+                    $('#InvoiceHeader').focus();
+                }
+            })
+        })
+	</script>
+</body>
+</html>

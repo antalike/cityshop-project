@@ -1,0 +1,442 @@
+article {
+	padding: 15px;
+}
+article h1 {
+	margin: 0 0 10px;
+	font-size: 1.4em;
+}
+article section {
+	margin: 15px 0
+}
+article p {
+	margin: 4px 0;
+	font-size: 1.3em;
+	line-height: 1.5em;
+}
+article a {
+	color: #363636;
+	text-decoration: none;
+}
+article ul {
+	margin: 4px 0;
+	padding-left: 1.5em;
+	font-size: 1.3em;
+	line-height: 1.5em;
+}
+article .para {
+	text-indent: 2em
+}
+.fa-angle-right {
+	position: absolute;
+	top: 50%;
+	right: 15px;
+	margin-top: -12px;
+	font-size: 2.2em;
+	font-style: normal;
+	color: #898989
+}
+.store-block {
+	background-color: #fff;
+	border-bottom: 1px solid #e0e0e0
+}
+.store-block .header {
+	background-color: #efefef
+}
+.store-block .headline {
+	position: relative;
+	height: 36px;
+	margin: 0;
+	padding-left: 15px;
+	padding-right: 15px;
+	font-size: 1.4em;
+	line-height: 36px;
+	font-weight: bold;
+	color: #363636;
+	cursor: pointer;
+}
+.store-block .headline span {
+	margin-right: 12px
+}
+.store-block .fa:before {
+	position: absolute;
+	top: 0;
+	right: 15px;
+	font-weight: normal;
+}
+.store-block .s-info {
+	margin: 10px 15px;
+}
+.store-block .s-info td {
+	padding: 2px 0;
+	font-size: 1.3em;
+	line-height: 1.5em;
+	vertical-align: top;
+}
+.store-block .s-info .label {
+	width: 70px;
+	font-weight: bold;
+	color: #f7941c
+}
+.store-block .s-info .label b {
+	letter-spacing: 2em;
+}
+
+/* ===== PRODUCT BLOCK ===== */
+.product-block .image img {
+	width: 100%
+}
+.product-block .price-now {
+	color: #f99500
+}
+.product-block .price-original {
+	text-decoration: line-through;
+	color: #898989
+}
+.product-block .amount {
+	overflow: hidden;
+}
+.product-block .amount input.quantity,
+.product-block .amount .btn-plus,
+.product-block .amount .btn-minus {
+	float: left;
+	height: 25px;
+	text-align: center;
+	color: #363636;
+	background-color: #fff;
+	border: 1px solid #898989;
+	text-decoration: none;
+}
+.product-block .amount input.quantity {
+	width: 56px;
+	margin: 0 2px;
+	padding: 0;
+	font-size: 1.4em;
+	outline: none;
+}
+.product-block .amount span.quantity {
+	font-size: 1.4em;
+	line-height: 1.5em;
+}
+.product-block .amount .btn-plus,
+.product-block .amount .btn-minus {
+	display: inline-block;
+	width: 25px;
+	font-size: 1.6em;
+	line-height: 23px;
+	vertical-align: top
+}
+.products-list .product-block {
+	overflow: hidden;
+	border-bottom: 1px solid #e0e0e0
+}
+.products-list .product-block .image {
+	float: left;
+}
+.products-list .product-block .promo {
+	font-size: 1.3em;
+	border-top: 1px dashed #e0e0e0;
+	clear: both;
+}
+
+/* ===== ORDER INFORMATION ===== */
+.order-info {
+	margin-bottom: 60px
+}
+.order-info .subtitle {
+	margin: 10px 10px 5px 10px;
+	font-size: 1.4em;
+	line-height: 1.5em;
+}
+.order-info .control {
+	position: relative;
+	padding: 10px;
+	background-color: #fff;
+	border: solid #e0e0e0;
+	border-width: 1px 0
+}
+.order-info .control .caption {
+	font-size: 1.3em;
+	line-height: 1.5em;
+}
+.order-info .delivery-address,
+.order-info .invoice-type {
+	padding-right: 30px;
+	cursor: pointer;
+}
+.order-info .delivery-address td {
+	padding: 1px 0;
+	font-family: Arial;
+	font-size: 1.3em;
+	line-height: 1.5em;
+	vertical-align: top;
+}
+.order-info .delivery-address .label {
+	width: 65px;
+	text-align: right;
+}
+.order-info .delivery-address .value {
+	color: #544f53
+}
+.order-info .buttons {
+	margin: 20px 10px 0
+}
+.order-info .button {
+	width: 48%;
+	margin: 0 1%
+}
+.order-form .control label {
+	line-height: 21px;
+}
+.order-form .payment-method ul {
+	overflow: hidden;
+	margin: 0;
+	padding-left: 0;
+	list-style: none;
+}
+.order-form .payment-method li {
+	float: left;
+	margin-right: 20px
+}
+.order-form .button {
+	width: 100%;
+	margin: 0
+}
+#order-products {
+	margin-top: 10px;
+	padding-left: 10px;
+	background-color: #fff;
+	border: solid #e0e0e0;
+	border-width: 1px 0
+}
+#order-products .caption {
+	margin: 10px 0 0;
+	font-size: 1.4em;
+	line-height: 1.5em
+}
+#order-products .product-block {
+	padding: 10px 10px 10px 0;
+}
+#order-products .product-block .image {
+	width: 88px;
+	border: 1px solid #e0e0e0
+}
+#order-products .product-block .meta {
+	position: relative;
+	margin-left: 100px;
+	height: 90px;
+}
+#order-products .product-block .name {
+	overflow: hidden;
+	height: 3em;
+	font-size: 1.3em;
+	line-height: 1.5em
+}
+#order-products .product-block .spec {
+	margin-top: 2px;
+	margin-bottom: 3px;
+	font-size: 1.3em;
+	line-height: 1.5em
+}
+#order-products .product-block .subtotal {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	text-align: right;
+}
+#order-products .product-block .price-now {
+	font-size: 1.6em
+}
+#order-products .product-block .price-original {
+	display: block;
+	font-size: 1.4em;
+}
+#order-products .product-block .promo {
+	margin-top: 10px;
+	padding-top: 10px;
+}
+#order-products .summary {
+	padding: 8px 10px 8px 0
+}
+#order-products .summary p {
+	overflow: hidden;
+	margin: 4px 0;
+}
+#order-products .summary .value,
+#order-products .summary .label {
+	font-size: 1.4em;
+	line-height: 1.5em;
+}
+#order-products .summary .caption {
+	display: inline-block;
+	margin-top: 2px;
+	margin-left: 5px;
+	font-size: 12px;
+	color: #898989;
+	vertical-align: top;
+}
+#order-products .summary .value-total {
+	font-size: 20px;
+	line-height: 1em;
+	color: #f99500
+}
+@media screen and (max-width:480px) {
+	.order-form .payment-method {
+		padding: 0 0 0 10px
+	}
+	.order-form .payment-method li {
+		width: 50%;
+		margin: 0;
+		padding: 10px 0;
+		box-sizing: border-box;
+	}
+	.order-form .payment-method li:nth-child(1),
+	.order-form .payment-method li:nth-child(2) {
+		border-bottom: 1px solid #e0e0e0
+	}
+}
+.order-nav {
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10000;
+	min-width: 320px;
+	max-width: 960px;
+	margin: 0 auto;
+	background-color: #fff;
+	border-bottom: 1px solid #e0e0e0
+}
+.order-nav a {
+	float: left;
+	display: block;
+	padding: 10px 15px;
+	font-size: 1.3em;
+	color: #363636;
+	text-decoration: none;
+}
+.order-nav .track {
+	position: absolute;
+	bottom: 0;
+	display: inline-block;
+	height: 2px;
+	background-color: #8a011e
+}
+.orders-wrapper {
+	padding-bottom: 40px
+}
+.orders-list {
+	padding-top: 40px;
+}
+.order-block {
+	margin-bottom: 4px;
+	padding-left: 10px;
+	background-color: #fff;
+	border: solid #e0e0e0;
+	border-width: 1px 0
+}
+.order-block .meta {
+	overflow: hidden;
+	position: relative;
+	padding: 10px 30px 10px 0;
+	cursor: pointer;
+}
+.order-block .meta span {
+	font-family: Arial, sans-serif;
+	font-size: 1.3em;
+	line-height: 1.5em;
+	color: #898989
+}
+.order-block .meta .time {
+	margin-right: 8px
+}
+.order-block .meta .status {
+	float: right;
+}
+.order-block .products {
+	padding: 0 10px 10px 0;
+	box-sizing: border-box;
+}
+.order-block .products .item {
+	border: 1px solid #e0e0e0
+}
+.order-block .summary {
+	padding: 10px 15px 10px 0;
+	border-top: 1px solid #e0e0e0;
+	text-align: right;
+}
+.order-block .summary .amount {
+	font-size: 1.4em;
+	font-weight: bold;
+	color: #898989;
+}
+.order-block .summary .price {
+	margin-left: 25px;
+	font-size: 2em;
+	color: #f99500;
+}
+.order-block .buttons {
+	padding: 10px 10px 10px 0;
+	border-top: 1px solid #e0e0e0;
+	text-align: right;
+}
+.order-block .button {
+	width: 100px;
+	margin-left: 6px;
+}
+
+
+/* ========== ADDRESS ========== */
+.address-wrapper .buttons {
+	margin: 20px 10px 0;
+}
+.address-block {
+	position: relative;
+	padding: 10px;
+	background-color: #fff;
+	border-bottom: 1px solid #e0e0e0
+}
+.address-block p {
+	margin: 4px 0;
+	font-size: 1.2em;
+	line-height: 1.5em;
+}
+.address-block .name {
+	display: inline-block;
+	margin-right: 5px;
+	font-weight: bold;
+}
+.address-block .tel {
+	display: inline-block;
+	margin-right: 5px;
+}
+.address-block .icon-default {
+	display: inline-block;
+	width: 40px;
+	height: 16px;
+	text-align: center;
+	line-height: 16px;
+	color: #fff;
+	background-color: #8a011e;
+	border-radius: 8px
+}
+.address-block .action {
+	position: absolute;
+	top: 13px;
+	right: 10px;
+}
+.address-block .action a {
+	margin-left: 5px;
+	font-size: 1.8em;
+	text-decoration: none;
+	color: #898989
+}
+
+.address-select .address-block .selector {
+	position: absolute;
+	top: 13px;
+	left: 10px
+}
+.address-select .address-block .meta {
+	margin-left: 28px
+}

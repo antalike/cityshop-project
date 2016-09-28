@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>订单详情</title>
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/wechat.common.css" />
+	<link rel="stylesheet" href="css/wechat.style.css" />
+</head>
+<body>
+	<div id="page">
+		<div id="main">
+			<div class="container">
+				<div class="order-info">
+					<!-- 收货地址 -->
+					<div class="delivery-address control">
+						<table>
+							<tr>
+								<td class="label">收件人：</td>
+								<td class="value">城市超市</td>
+								<td class="label">电话：</td>
+								<td class="value">133****9708</td>
+							</tr>
+							<tr>
+								<td class="label">收件地址：</td>
+								<td class="value" colspan="3">上海市静安区康定路1469号海森国际大厦1703室</td>
+							</tr>
+						</table>
+					</div>
+
+					<!-- 配送方式 -->
+					<h2 class="subtitle">配送方式</h2>
+					<div class="delivery-method control">
+						<span class="caption">城市超市配送</span>
+					</div>
+
+					<!-- 发票信息 -->
+					<h2 class="subtitle">发票信息</h2>
+					<div class="delivery-method control">
+						<span class="caption">普通发票</span>
+					</div>
+
+					<!-- 付款方式 -->
+					<h2 class="subtitle">付款方式</h2>
+					<div class="delivery-method control">
+						<span class="caption">货到付款</span>
+					</div>
+
+					<!-- 商品清单 -->
+					<div id="order-products">
+						<p class="caption">共<b>2</b>件商品</p>
+						<div class="products-list">
+							<div class="product-block">
+								<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20505882.jpg" alt="台湾麻豆文旦柚" title="台湾麻豆文旦柚"></div>
+								<div class="meta">
+									<div class="name">台湾麻豆文旦柚</div>
+									<div class="spec">规格：个</div>
+									<div class="amount"><span class="quantity">x 1</span></div>
+									<div class="subtotal">
+										<span class="price-now">¥ 15.00</span>
+									</div>
+								</div>
+								<div class="promo">【赠品】：台湾麻豆文旦柚 x1</div>
+							</div>
+							<div class="product-block">
+								<div class="image"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20916541.jpg" alt="金伯利红牌澳洲谷饲牛胸肉(中式牛腩)" title="金伯利红牌澳洲谷饲牛胸肉(中式牛腩)"></div>
+								<div class="meta">
+									<div class="name">金伯利红牌澳洲谷饲牛胸肉(中式牛腩)</div>
+									<div class="spec">规格：约300g/盒</div>
+									<div class="amount"><span class="quantity">x 0.30</span></div>
+									<div class="subtotal">
+										<span class="price-original">¥ 1145.00</span>
+										<span class="price-now">¥ 21141.40</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="summary">
+							<p><span class="label">合计：</span><span class="value-total">¥ 32.00</span><span class="caption">（含运费 &yen; 0.00 ）</span></p>
+							<p><span class="label">优惠：</span><span class="value">- ¥ 3.00</span></p>
+						</div>
+					</div>
+
+					<div class="buttons"><a href="#" class="button btn-grey">取消订单</a><a href="#" class="button btn-red">去付款</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+</body>
+</html>

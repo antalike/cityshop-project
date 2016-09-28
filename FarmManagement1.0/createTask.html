@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="format-detection" content="email=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /> 
+	<title>新增任务</title>
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<div id="page">
+		<header id="header" class="header">
+            <h1 class="headline">新增任务</h1>
+	       <a href="javascript:history.go(-1);" class="btn-go-back"></a>
+		</header>
+        <div class="BottomNav clearfix">
+            <a href="index.html"><i class="home"></i>首页</a>
+            <a href="management.html" class="highlight"><i class="manage"></i>农事管理</a>
+            <a href="account.html"><i class="account"></i>我的账号</a>
+        </div>
+		<main id="main" class="main">
+			<div class="main-wrapper">
+                <div class="form">
+                    <form id="taskForm" autocomplete="off">
+                        <div class="FormItem clearfix">
+                            <div class="label"><label>地块编号</label></div>
+                            <div class="field"><input type="text" name="fieldnum" class="required input-txt fieldnum" data-errorEmpty="* 请输入地块编号"/></div>
+                        </div>
+                        <div class="FormItem clearfix">
+                            <div class="label"><label>作物名称</label></div>
+                            <div class="field">
+                                <select name="productname" id="productnameSelect" class="required productname" data-errorEmpty="* 请选择作物名称">
+                                    <option value="20076546">青菜</option>
+                                    <option value="20076544">大白菜</option>
+                                    <option value="20076543">空心菜</option>
+                                    <option value="20076549">韭菜</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="FormItem clearfix">
+                            <div class="label"><label>任务名称</label></div>
+                            <div class="field">
+                                <select name="taskname" id="tasknameSelect" class="required taskname" data-errorempty="* 请选择任务名称">
+                                    <option value="1">浇水</option>
+                                    <option value="2">施肥</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="FormItem clearfix">
+                            <div class="label"><label>执行时间</label></div>
+                            <div class="field"><input type="date" class="required input-txt executetime" data-errorEmpty="* 请选择执行时间" name="time" /></div>
+                        </div>
+                        <div class="button">
+                            <div class="errorMessage"></div>
+                            <input class="a01" type="reset" value="取消"/>
+                            <input class="a02 btn-submit" type="submit" value="保存"/>
+                        </div>
+                    </form>
+                </div>
+			</div>
+		</main>
+        <div id="messageBox"></div>
+	</div>
+    <script type="text/javascript" src="scripts/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="scripts/script.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var $form = $('#taskForm'),
+                $errorMessage = $form.find('.errorMessage'),
+                $required = $form.find('.required'),
+                $fieldnum = $form.find('.fieldnum'),
+                $productname = $form.find('.productname'),
+                $taskname = $form.find('.taskname'),
+                $executetime = $form.find('.executetime'),
+                $submit = $form.find('.btn-submit'),
+                $messageBox = $('#messageBox');
+            
+            enableSubmit();
+
+            $executetime.on('input', enableSubmit);
+
+            function enableSubmit() {
+                var enable = true;
+
+                for (var i = 0; i < $required.length; i++) {
+                    var $this = $required.eq(i);
+                    if ($this.is('input') && $this.val().length <= 0) {
+                        enable = false;
+                    }
+
+                    if ($this.is('select') && $this.val() == null) {
+                        enable = false;
+                    }
+                }
+
+                if (enable) {
+                    $submit.removeClass('disabled').attr('disabled', false);
+                } else {
+                    $submit.addClass('disabled').attr('disabled', true);
+                }
+            }
+
+            //提交表单
+            $form.submit(function () {
+                var value = $fieldnum.val() + ',' + $productname.val() + ',' + $taskname.val() + ',' + $executetime.val() + ' 00:00:00';
+
+                $messageBox.html('创建成功！').fadeIn().delay(1000).fadeOut(300, function () {
+                    window.location.href = 'management.html';
+                });
+
+                return false;
+            })
+        })
+    </script>
+</body>
+</html>

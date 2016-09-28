@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="format-detection" content="email=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /> 
+	<title>结算</title>
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" href="css/style.mobile.css" />
+</head>
+<body id="checkout">
+	<div id="page">
+		<!-- Header -->
+		<div id="header" class="header">
+            <a href="javascript:history.go(-1);" class="btn-go-back icon icon-left-arrow">返回</a>
+			<h1 class="headline">结算</h1>
+			<a href="javascript:void(0);" class="trigger-nav"></a>
+			<div id="nav-v" class="nav-s1">
+			    <div class="nav-wrapper">
+				    <a class="item" href="index.html"><i class="icon-home"></i>首页</a>
+					<a class="item" href="category.html"><i class="icon-list"></i>分类</a>
+					<a class="item" href="cart.html"><i class="icon-cart"></i>购物车</a>
+					<a class="item" href="profile.html"><i class="icon-user"></i>我的账户</a>	
+				</div>
+			</div>
+		</div>
+		<!-- End -->
+
+		<!-- Main -->
+		<div id="main" class="main">
+			<div class="main-wrapper">
+				<form action="/cart/orderconfirm" id="order-submit-form" method="post">
+					<div class="order-boxes">
+						<!-- 收货信息 -->
+						<div class="order-box">
+							<div class="heading"><h2 class="title"><i class="icon-location"></i>收货信息</h2></div>
+							<div class="content">
+		                        <div class="control-group">
+									<div class="control">
+										<div class="caption"><a href="AddressesList2.html">收货人：城市超市<span class="telephone">13312456874</span><span class="address">收货地址：上海 上海静安区海森国际大厦1703</span></a><i class="icon-right-arrow"></i></div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- 配送时间 -->
+						<div class="order-box">
+							<div class="heading"><h2 class="title"><i class="icon-lock"></i>配送时间</h2></div>
+							<div class="content">
+		                        <div class="control-group">
+									<div class="control">
+										<div class="caption"><a href="DeliveryTimeInfo.html" id="showReceiveTime">预计 09月03日 11:00 - 15:00 送达</a><i class="icon-right-arrow"></i></div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- 支付方式 -->
+						<div class="order-box">
+							<div class="heading"><h2 class="title"><i class="icon-yen"></i>选择支付方式</h2></div>
+							<div class="content">
+								<div class="control-group">
+		                        	<div class="control control-grid">
+		                                <div class="field">
+		                                	<input checked="checked" class="input-radio" type="radio" name="PayTypeList" id="payment-method-15" value="1" data-onlinepaytype="5">
+		                                	<label class="label-radio" for="payment-method-15">支付宝</label>
+		                                </div>
+		                            </div>
+                                    <div class="control">
+                                        <div class="field">
+                                            <input class="input-radio" type="radio" name="PayTypeList" id="payment-method-2" value="2">
+                                            <label class="label-radio" for="payment-method-2"> 货到付款<b id="CodTypeText">现金</b></label>
+                                            <a class="icon-right-arrow" href="PostPayInfo.html">修改</a>
+                                            <input id="CodType" name="CodType" type="hidden" value="1">
+                                        </div>
+                                    </div>
+								</div>
+							</div>
+						</div>
+
+						<!-- 发票 -->
+						<div class="order-box">
+							<div class="heading"><h2 class="title"><i class="icon-invoice"></i>索要发票</h2></div>
+							<div class="content">
+								<div class="control-group">
+		                            <div class="control control-grid">
+		                                <div class="field">
+		                                    <input class="input-radio" type="radio" name="iNeedInvoice" id="iNeedInvoice1" value="3" checked="">
+		                                    <label class="label-radio" for="iNeedInvoice1">不需要发票</label>
+		                                </div>
+		                                <div class="field">
+		                                    <input class="input-radio" type="radio" name="iNeedInvoice" id="iNeedInvoice2" value="1">
+		                                    <label class="label-radio" for="iNeedInvoice2">需要发票</label>
+		                                </div>
+		                            </div>
+									<div class="control control-invoice" style="display: none;">
+										<div class="caption">
+		                                    <a href="InvoiceInfo.html"><span id="InvoiceType">普通发票</span><b><span id="InvoiceHeaderTxt">个人，</span><span id="InvoiceContentTxt">食品</span></b></a>
+		                                    <i class="icon-right-arrow"></i>
+		                                    <input id="InvoiceTypeList" name="InvoiceTypeList" type="hidden" value="3">
+		                                </div>
+									</div>
+								</div>
+							</div>
+						</div>
+		                
+		                <!-- 顾客留言 -->
+					    <div class="order-box">
+						    <div class="heading"><h2 class="title"><i class="icon-write"></i>顾客留言</h2></div>
+						    <div class="content">
+		                        <div class="control">
+		                            <div class="filed">
+		                                <textarea class="input-text" cols="20" id="CustomerDemo" name="CustomerDemo" placeholder="选填" rows="2"></textarea>
+		                            </div>
+		                        </div>
+						    </div>
+					    </div> 
+					</div>
+					<div class="order-products">
+				        <p class="caption">共5件商品</p>
+					    <div class="product-block" id="item_row_2095355300">
+						    <div class="media">
+				                <div class="media-left">
+				                    <div class="image"><a href="/store/productdetails/all/zh-cn/20953553"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20953553.jpg" alt="新西兰黄心猕猴桃(6个装)"></a></div>
+				                </div>
+				                <div class="media-body">
+				                    <div class="meta">
+				                        <div class="name"><a href="/store/productdetails/all/zh-cn/20953553">新西兰黄心猕猴桃(6个装)</a></div>
+										<div class="spec">规格：6个</div>
+				                    </div>
+				                    <div class="price">
+				                        <span class="price-now" id="subTotal_2095355300">¥ 50.00</span>
+				                    </div>
+				                    <div class="action">
+				                      	<div class="quantity">x 1</div>
+								    </div>
+				                </div>
+				            </div>
+					    </div>
+					    <div class="product-block" id="item_row_2095025500">
+						    <div class="media">
+				                <div class="media-left">
+				                    <div class="image"><a href="/store/productdetails/all/zh-cn/20950255"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20950255.jpg" alt="奥布里花园牌起泡柠檬苹果汁(碳酸饮料)"></a></div>
+				                </div>
+				                <div class="media-body">
+				                    <div class="meta">
+				                        <div class="name"><a href="/store/productdetails/all/zh-cn/20950255">奥布里花园牌起泡柠檬苹果汁(碳酸饮料)</a></div>
+										<div class="spec">规格：750ml</div>
+				                    </div>
+				                    <div class="price">
+				                        <span class="price-now" id="subTotal_2095025500">¥ 68.00</span>
+				                        <span class="price-original" id="subOriTotal_2095025500">¥ 78.20</span>
+				                    </div>
+				                    <div class="action">
+				                      	<div class="quantity">x 1</div>
+								    </div>
+				                </div>
+				            </div>
+					    </div>
+					    <div class="product-block" id="item_row_2096870000">
+						    <div class="media">
+				                <div class="media-left">
+				                    <div class="image"><a href="/store/productdetails/all/zh-cn/20968700"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20968700.jpg" alt="青研牌苹果汁"></a><span class="gift-rule">买1送1</span></div>
+				                </div>
+				                <div class="media-body">
+				                    <div class="meta">
+				                        <div class="name"><a href="/store/productdetails/all/zh-cn/20968700">青研牌苹果汁</a></div>
+										<div class="spec">规格：1kg</div>
+				                    </div>
+				                    <div class="price">
+				                        <span class="price-now" id="subTotal_2096870000">¥ 58.00</span>
+				                    </div>
+				                    <div class="action">
+				                      	<div class="quantity">x 1</div>
+								    </div>
+				                </div>
+						        <div class="promo-info">
+				                    <i class="icon-promo-text">赠品</i>
+				                    <p class="promo-text"><a href="/store/productdetails/all/zh-cn/20968700">
+				                       青研牌苹果汁
+				                    </a>
+				                    x<span id="giftcount_2096870000">1</span></p>
+				                </div>
+				            </div>
+					    </div>
+					    <div class="product-block" id="item_row_2078393800">
+						    <div class="media">
+				                <div class="media-left">
+				                    <div class="image"><a href="/store/productdetails/all/zh-cn/20783938"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20783938.jpg" alt="山东嘎啦苹果"></a></div>
+				                </div>
+				                <div class="media-body">
+				                    <div class="meta">
+				                        <div class="name"><a href="/store/productdetails/all/zh-cn/20783938">山东嘎啦苹果</a></div>
+										<div class="spec">规格：约750g/4个</div>
+				                    </div>
+				                    <div class="price">
+				                        <span class="price-now" id="subTotal_2078393800">¥ 13.60</span>
+				                    </div>
+				                    <div class="action">
+				                      	<div class="quantity">x 0.75</div>
+								    </div>
+				                </div>
+				            </div>
+					    </div>
+					    <div class="product-block" id="item_row_2096746800">
+						    <div class="media">
+				                <div class="media-left">
+				                    <div class="image"><a href="/store/productdetails/all/zh-cn/20967468"><img src="http://www.cityshop.com.cn/Content/Images/Product/large/20967468.jpg" alt="樱桃丘陵牌巴多利诺红葡萄酒"></a></div>
+				                </div>
+				                <div class="media-body">
+				                    <div class="meta">
+				                        <div class="name"><a href="/store/productdetails/all/zh-cn/20967468">樱桃丘陵牌巴多利诺红葡萄酒</a></div>
+										<div class="spec">规格：750ml</div>
+				                    </div>
+				                    <div class="price">
+				                        <span class="price-now" id="subTotal_2096746800">¥ 110.00</span>
+				                    </div>
+				                    <div class="action">
+				                      	<div class="quantity">x 2</div>
+								    </div>
+				                </div>
+		                        <div class="promo-info">
+		                            <i class="icon-promo-text">促销</i>
+		                            <p class="promo-text">第二件半价</p>
+		                            <p class="price-subtotal" id="subfavorable_2096746800">¥ 165.00</p>  
+		                        </div>		                                
+				            </div>
+					    </div>		        
+					</div>
+			        <div class="order-summary">
+			            <p><span class="label">商品总额</span><span class="value total-price">¥ 351.20</span></p>
+			            <p><span class="label"><a href="javascript:void(0);" class="trigger-freightNote">运费<i class="icon-hints">说明</i></a></span><span class="value">+ ¥ 0.00</span></p>
+			        </div>
+					<div class="cart-toolbar">   
+				        <div class="buttons">
+				            <a href="javascript:void(0);" id="btnOrderSubmit" class="btn-checkout">提交订单</a>
+				        </div>			  
+						<div class="summary">
+				            <p><span class="label">应付金额：</span><span class="total-price" id="TotalPrice">¥ 351.20</span></p>
+						</div>
+					</div>
+		            <div id="dialog-box">
+			            <div class="dialog-body" style="width: 18rem">
+		                    <div class="caption">
+		                    	<div id="freightNote">
+		                    		<style type="text/css">#freightNote{padding:.625rem 1rem 1rem}#freightNote h4{margin:0;padding-bottom:.625rem;font-size:.875rem;text-align:center;color:#363636}#freightNote table{width:100%;font-size:.75rem;text-align:center;color:#898989;border-collapse:collapse}#freightNote table td,#freightNote table th{padding:.375rem 0;border:1px solid #e0e0e0}</style>
+									<h4>运费说明</h4>
+									<table>
+										<tr>
+											<th>地区</th>
+											<th>配送费用</th>
+											<th>免运费标准</th>
+										</tr>
+										<tr>
+											<td>上海（除崇明）</td>
+											<td>20元/单</td>
+											<td>单笔订单满200元</td>
+										</tr>
+										<tr>
+											<td>上海崇明</td>
+											<td>30元/单</td>
+											<td>单笔订单满300元</td>
+										</tr>
+										<tr>
+											<td>北京</td>
+											<td>30元/单</td>
+											<td>单笔订单满300元</td>
+										</tr>
+										<tr>
+											<td>江苏</td>
+											<td>30元/单</td>
+											<td>单笔订单满300元</td>
+										</tr>
+										<tr>
+											<td>浙江</td>
+											<td>30元/单</td>
+											<td>单笔订单满300元</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+					        <div class="buttons"><a class="btn-cancel" href="javascript:void(0);">我知道了</a></div>
+			            </div>
+		            </div>
+		            <div class="modal-overlay" style="display: none;"></div>
+			  </form>
+			</div>
+		</div>
+		<!-- End -->
+
+		<a id="toTop" class="icon-totop" href="javascript:void(0);">toTop</a>
+        <div id="message-box"></div>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/site.js"></script>
+	<script type="text/javascript" src="js/checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="format-detection" content="email=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /> 
+	<title>订单详情</title>
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" href="css/style.mobile.css" />
+</head>
+<body id="order-detail">
+	<div id="page">
+		<!-- Header -->
+		<div id="header" class="header">
+			<a href="javascript:history.go(-1);" class="btn-go-back icon icon-left-arrow">返回</a>
+			<h1 class="headline">我的订单</h1>
+		</div>
+		<!-- End -->
+
+		<!-- Nav -->
+		<div id="nav-h" class="nav">
+			<a class="item" href="index.html"><i class="icon-home"></i>首页</a>
+			<a class="item" href="category.html"><i class="icon-list"></i>分类</a>
+			<a class="item" href="cart.html"><i class="icon-cart"><span id="cart-num" class="cart-num">0</span></i>购物车</a>
+			<a class="item current" href="profile.html"><i class="icon-user"></i>我的账户</a>
+		</div>
+		<!-- End -->
+
+		<!-- Main -->
+		<div id="main" class="main">
+			<div class="main-wrapper">
+			    <div class="order-view">
+			        <p><span class="label">订单号：</span><span class="value">16090200001</span></p>
+			        <p><span class="label">成交时间：</span><span class="value">2016/9/2 10:31:28</span></p>
+			        <p><span class="label">当前状态：</span><span class="value">已提交</span></p>
+			        <p><span class="label">收货人：</span><span class="value">城市超市</span></p>
+			        <p><span class="label">手机号码：</span><span class="value">13312563256</span></p>
+			        <p><span class="label">收货地址：</span><span class="value">上海市静安区康定路</span></p>
+			        <p><span class="label">支付信息：</span><span class="value">在线支付</span></p>
+			    </div>
+			    <div class="order-products">
+			        <p class="caption">共2件商品</p>
+		            <div class="product-block">
+	                    <div class="media">
+	                        <div class="media-left">
+	                            <div class="image"><a href="/store/productdetails/all/zh-cn/20759858"><img src="http://www.cityshop.com.cn/Content/Images/Product/mega/20759858.jpg" alt=""></a></div>   
+	                        </div>
+	                        <div class="media-body">
+                                <div class="meta">
+                                    <div class="name">
+                                        <a href="/store/productdetails/all/zh-cn/20759858">南汇8424西瓜</a>
+                                    </div>
+                                    <div class="spec">规格：约3.5kg/只</div>
+                                </div>
+                                <div class="price"><span class="price-now">¥45.00</span>
+                                </div>
+                                <div class="action">
+                                    <div class="quantity">x 1</div>
+                                </div>
+	                        </div>
+	                    </div>
+		            </div>
+		            <div class="product-block">
+	                    <div class="media">
+	                        <div class="media-left">
+	                            <div class="image"><a href="/store/productdetails/all/zh-cn/20926601"><img src="http://www.cityshop.com.cn/Content/Images/Product/mega/20926601.jpg" alt=""></a></div>   
+	                        </div>
+	                        <div class="media-body">
+                                <div class="meta">
+                                    <div class="name">
+                                        <a href="/store/productdetails/all/zh-cn/20926601">蓝莓(2盒装)</a>
+                                    </div>
+                                    <div class="spec">规格：2盒</div>
+                                </div>
+                                <div class="price"><span class="price-now">¥35.00</span></div>
+                                <div class="action">
+                                    <div class="quantity">x 1</div>
+                                </div>
+                        	</div>
+                    	</div>
+                    </div>			            
+			        <div class="summary">
+			            <div class="left">
+			                <p><span class="label">优惠：</span><span class="value">¥ 0.00</span></p>
+			                <p><span class="label">运费：</span><span class="value">¥ 30.00</span></p>
+						</div>
+			            <div class="total">
+			                <span class="label">总计：</span><span class="value">¥ 110.00</span>
+			            </div>
+			        </div>
+			    </div>
+			    <div class="instruction"><p>说明：如需取消订单，请拨打客服热线 400-811-1797</p>
+			    <div class="buttons">
+			         <input type="submit" class="btn-paynow" value="现在付款">
+				</div>  
+			    <div id="dialog-box">
+					<div class="content">
+						<div class="hints">确认删除该订单？</div>
+						<div class="buttons">
+							<a href="javascript:void(0);" class="button btn-confirm">确定</a><a href="javascript:void(0);" class="button btn-cancel">取消</a>
+						</div>	
+					</div>
+				</div>
+            </div>
+		</div>
+		<!-- End -->
+
+		<a id="toTop" class="icon-totop" href="javascript:void(0);">toTop</a>
+        <div id="message-box"></div>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/site.js"></script>
+</body>
+</html>
