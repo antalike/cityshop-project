@@ -1,0 +1,114 @@
+#footer {
+	background-color: #6e1d24;
+	font-size: 12px;
+}
+
+#footer, #footer a {
+	color: #fff;
+}
+
+#footer a:hover {
+	text-decoration: underline;
+}
+
+#footer-wrapper {
+	height: 217px;
+	margin: 0 auto;
+	padding: 25px 0;
+}
+
+#footer-left {
+	float: left;
+}
+
+#footer-right {
+	float: right;
+}
+
+#helpcenter-table {
+	margin-top: 15px;
+}
+
+#helpcenter-table td, #helpcenter-table th {
+	padding: 2px 15px 3px 40px;
+	text-align: left;
+}
+
+#helpcenter-table th {
+	padding-bottom: 8px;
+	font-size: 16px;
+	font-weight: normal;
+	background: url(../images/sprite.png) no-repeat;
+}
+
+#helpcenter-table .footer-icon1 { background-position: 0 2px; }
+#helpcenter-table .footer-icon2 { background-position: 0 -23px; }
+#helpcenter-table .footer-icon3 { background-position: 0 -48px; }
+#helpcenter-table .footer-icon4 { background-position: 0 -73px; }
+
+#aboutus-table td {
+	height: 25px;
+}
+
+#aboutus-table {
+	margin-top: 18px;
+}
+
+#aboutus-table a {
+	display: inline-block;
+	height: 12px;
+	line-height: 12px;
+	padding: 0 8px;
+}
+
+#aboutus-table .cell-container a {
+	border-right: 1px solid #fff;
+}
+
+#aboutus-table .copyright {
+	text-align: center;
+}
+
+#aboutus-table .copyright-statement {
+	padding: 0 6px;
+}
+
+#hotline-table {
+
+	width: 286px;
+	padding: 5px 10px;
+	margin-bottom: 5px;
+	background-color: #823d42;
+}
+#hotline-table td {
+
+	height: 70px;
+	padding-left: 40px;
+	background: url(../images/sprite.png) no-repeat;
+}
+
+#hotline-table .footer-icon1 {
+	background-position: -212px 0;
+}
+
+#hotline-table .footer-icon2 {
+	background-position: -212px -75px;
+}
+
+#hotline-table p {
+	margin-bottom: 3px;
+}
+
+#hotline-table .footer-title {
+	font-size: 16px;
+	margin-right: 18px;
+}
+
+#hotline-table .footer-tel {
+	margin-right: 20px;
+	font-weight: bold;
+}
+
+#ssl-table td {
+	width: 140px;text-align: center;
+}

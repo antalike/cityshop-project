@@ -1,0 +1,2331 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Meat Framework</title>
+	<link rel="stylesheet" type="text/css" href="css/default.css" />
+	<link rel="stylesheet" type="text/css" href="css/header.css" />
+	<link rel="stylesheet" type="text/css" href="css/footer.css" />
+	<!-- <link rel="stylesheet" type="text/css" href="css/navigator.css" />
+	-->
+	<link rel="stylesheet" type="text/css" href="css/MeatPavilion.css" />
+	<link rel="stylesheet" type="text/css" href="css/MeatCategory.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.css" />
+</head>
+<body>
+	<!-- Header -->
+	<div id="top-header">
+		<div id="top-header-wrapper">
+			<div id="top-header-left">
+				<div class="lan-select">
+					<a href="#">
+						<img src="images/flagChina.jpg" width="21" height="16" alt="" />
+					</a>
+				</div>
+				<div id="search-form">
+					<form action="/store/search" method="get">
+						<input type="text" id="Keywords" name="Keywords" value="Keyword to search" rel="Keyword to search" class="clearField" />
+						<select name="searchCategory" id="searchCategory" class="searchSelect">
+							<option value="0">全部分类</option>
+							<option value="1">水果/蔬菜</option>
+							<option value="62">豆制品</option>
+							<option value="63">奶制品</option>
+							<option value="64">畜禽水产</option>
+							<option value="65">熟肉制品</option>
+							<option value="66">水/饮料</option>
+							<option value="67">茶叶/咖啡</option>
+							<option value="68">酒类</option>
+							<option value="69">营养早餐食品</option>
+							<option value="70">调味品</option>
+							<option value="71">粮油杂货</option>
+							<option value="72">罐头食品</option>
+							<option value="73">休闲食品</option>
+							<option value="74">烘焙</option>
+							<option value="75">城市自制</option>
+							<option value="76">冷冻速食包装</option>
+							<option value="77">宠物食/用品</option>
+							<option value="78">个人护理用品</option>
+							<option value="79">家居日用</option>
+							<option value="81">婴幼儿商品</option>
+							<option value="83">特殊商品</option>
+							<option value="84">优惠促销</option>
+						</select>
+						<div id="main_box">
+							<ul>
+								<li class="select_box">
+									<span>All Categories</span>
+									<ul class="son_ul">
+										<li index="1">水果/蔬菜</li>
+										<li index="62">豆制品</li>
+										<li index="63">奶制品</li>
+										<li index="64">畜禽水产</li>
+										<li index="65">熟肉制品</li>
+										<li index="66">水/饮料</li>
+										<li index="67">茶叶/咖啡</li>
+										<li index="68">酒类</li>
+										<li index="69">营养早餐食品</li>
+										<li index="70">调味品</li>
+										<li index="71">粮油杂货</li>
+										<li index="72">罐头食品</li>
+										<li index="73">休闲食品</li>
+										<li index="74">烘焙</li>
+										<li index="75">城市自制</li>
+										<li index="76">冷冻速食包装</li>
+										<li index="77">宠物食/用品</li>
+										<li index="78">个人护理用品</li>
+										<li index="79">家居日用</li>
+										<li index="81">婴幼儿商品</li>
+										<li index="83">特殊商品</li>
+										<li index="84">优惠促销</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<input type="submit" id="searchBox" class="search-button" value="搜索" onclick="return clickSearch()" />
+					</form>
+				</div>
+			</div>
+			<div id="top-header-right">
+				<div id="logindisplay">
+					<a href="#">Register</a>
+					|
+					<a href="#">Sign In</a>
+					|
+					<a href="http://www.cityshop.com.cn/cart/viewcart">Shopping Cart</a>
+					|
+					<a href="http://www.cityshop.com.cn/aboutus/about">About Us</a>
+					|
+					<a href="http://www.cityshop.com.cn/helpcenter/register">Help</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End -->
+
+	<div id="main-wrapper">
+		<div id="main">
+			<!-- 侧边导航 -->
+			<div id="pavilion-sidebar">
+				<h1 class="logo">
+					<a href="http://www.cityshop.com.cn/store/shopmainentry">
+						<img src="images/logo.png" alt="CITY SHOP CITY LIFE" width="151" height="74" />
+					</a>
+				</h1>
+				<div class="box"></div>
+				<ul class="navigation">
+					<li>
+						<a href="http://www.cityshop.com.cn/">HOME</a>
+					</li>
+					<li>
+						<a href="http://www.cityshop.com.cn/store/shopmainentry">ONLINE SHOP</a>
+					</li>
+					<li>
+						<a href="http://www.cityshop.com.cn/store/pavilionhome/zh-cn">SPECIAL THEME</a>
+					</li>
+					<li>
+						<a href="http://www.cityshop.com.cn/score/index">INTEGRAL MALL</a>
+					</li>
+					<li>
+						<a href="http://www.cityshop.com.cn/aboutus/about">ABOUT US</a>
+					</li>
+				</ul>
+				<ul class="pavilion-nav clearfix">
+					<li>
+						<a href="#">
+							<img src="images/nav-beef.png" alt="Beef" width="70" height="70" />
+						</a>
+						<a href="#">BEEF</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/nav-pork.png" alt="Pork" width="70" height="70" />
+						</a>
+						<a href="#">PORK</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/nav-poultry.png" alt="Poultry" width="70" height="70" />
+						</a>
+						<a href="#">POULTRY</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/nav-ground.png" alt="Ground" width="70" height="70" />
+						</a>
+						<a href="#">GROUND</a>
+					</li>
+				</ul>
+			</div>
+			<!-- 结束 -->
+			<div id="pavilion-content">
+				<div id="slides">
+					<div class="slides-container">
+						<div class="slides-control">
+							<div class="section" id="pavilion-homepage">
+								<div id="meatMainBanner">
+									<img src="images/meat-logo.png" alt="" width="386" height="214" class="pavilion-logo" />
+								</div>
+								<div id="meatSmallBanner">
+									<ul>
+										<li>
+											<a href="#">
+												<img src="images/meatbanner1.jpg" alt="" width="225" height="110" />
+											</a>
+											<p>Butcher's Tips</p>
+										</li>
+										<li>
+											<a href="#">
+												<img src="images/meatbanner2.jpg" alt="" width="225" height="110" />
+											</a>
+											<p>Meat Thermometer How-To</p>
+										</li>
+										<li>
+											<a href="#">
+												<img src="images/meatbanner3.jpg" alt="" width="225" height="110" />
+											</a>
+											<p>Buying, Handling, Storing</p>
+										</li>
+									</ul>
+								</div>
+								<div class="pavilion-search">
+									<div class="pavilion-search-wrapper">
+										<form action="">
+											<input type="text" id="pavilion-keywords" name="Keywords" value="Search in Pavilion" rel="Search in Pavilion" class="clearField" />
+											<select name="searcMeatCategory" id="searcMeatCategory">
+												<option value="0">ALL META</option>
+												<option value="1">BEEF</option>
+												<option value="2">PORK</option>
+												<option value="3">POULTRY</option>
+												<option value="4">GROUND</option>
+											</select>
+											<div id="pavilion_main_box">
+												<ul>
+													<li class="select_box">
+														<span>ALL META</span>
+														<ul class="son_ul">
+															<li index="0">ALL META</li>
+															<li index="1">BEEF</li>
+															<li index="2">PORK</li>
+															<li index="3">POULTRY</li>
+															<li index="4">GROUND</li>
+														</ul>
+													</li>
+												</ul>
+											</div>
+											<input type="submit" value="GO" id="pavilion-search-btn" />
+										</form>
+									</div>
+								</div>
+								<a href="#" class="slides-next slides-direction" data-dir="next">next</a>
+							</div>
+							<div class="section" id="pavilion-category">
+								<div class="sub-section" id="pavilion-beef">
+									<div class="category-sidebar">
+										<h2 class="category-logo">
+											<img src="images/beef/beef-logo.png" width="126" height="53" alt="Beef Logo"></h2>
+										<ul class="category-nav">
+											<li class="highlight">
+												<a href="#">choices of beef</a>
+											</li>
+											<li>
+												<a href="#">cooking of beef</a>
+											</li>
+											<li>
+												<a href="#">beef's nutrients</a>
+											</li>
+										</ul>
+									</div>
+									<div class="category-content">
+										<h3 class="category-title">
+											<img src="images/beef/beef-title1.png" height="33" alt="Beef Cut"></h3>
+										<div class="category-tab-wrapper">
+											<div class="category-tab scrollable" id="tab-choice">
+												<div class="scroll-section">
+													<img src="images/beef/beef-cut.png" width="660" height="230" alt="" />
+													<h4>
+														<img src="images/beef/beef-choice.png" width="660" height="26" alt="choice of beef" />
+													</h4>
+													<div class="flexslider-choice carousel">
+														<ul class="slides">
+															<li>
+																<a href="#">
+																	<img src="images/beef/beef1.jpg" width="140" height="140" alt=""></a>
+																<p class="product-name">
+																	<a href="#">Domestic Beef Topside Cube</a>
+																</p>
+																<p class="product-price">￥33.50</p>
+															</li>
+															<li>
+																<a href="#">
+																	<img src="images/beef/beef2.jpg" width="140" height="140" alt=""></a>
+																<p class="product-name">
+																	<a href="#">Domestic Beef Topside Cube</a>
+																</p>
+																<p class="product-price">￥33.50</p>
+															</li>
+															<li>
+																<a href="#">
+																	<img src="images/beef/beef3.jpg" width="140" height="140" alt=""></a>
+																<p class="product-name">
+																	<a href="#">Domestic Beef Topside Cube</a>
+																</p>
+																<p class="product-price">￥33.50</p>
+															</li>
+															<li>
+																<a href="#">
+																	<img src="images/beef/beef4.jpg" width="140" height="140" alt=""></a>
+																<p class="product-name">
+																	<a href="#">Domestic Beef Topside Cube</a>
+																</p>
+																<p class="product-price">￥33.50</p>
+															</li>
+															<li>
+																<a href="#">
+																	<img src="images/beef/beef3.jpg" width="140" height="140" alt=""></a>
+																<p class="product-name">
+																	<a href="#">Domestic Beef Topside Cube</a>
+																</p>
+																<p class="product-price">￥33.50</p>
+															</li>
+															<li>
+																<a href="#">
+																	<img src="images/beef/beef4.jpg" width="140" height="140" alt=""></a>
+																<p class="product-name">
+																	<a href="#">Domestic Beef Topside Cube</a>
+																</p>
+																<p class="product-price">￥33.50</p>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<div class="scroll-section">
+													<div class="filter-nav">
+														<div class="filter-main filter-choice">
+															<a href="#" class="all">all</a>
+															<a href="#" class="rib">rib</a>
+															<a href="#" class="loin">loin</a>
+															<a href="#" class="sirloin">sirloin</a>
+															<a href="#" class="round">round</a>
+															<a href="#" class="shank">shank</a>
+															<a href="#" class="other">other</a>
+														</div>
+														<div class="filter-sub">
+															<span>COOKING METHOD:</span>
+															<a href="#" class="currentSelect">All</a>
+															<a href="#">Grill</a>
+															<a href="#">Marinate</a>
+															<a href="#">Stri-Fry</a>
+															<a href="#">Quick&amp;Easy</a>
+															<a href="#">Roast</a>
+															<a href="#">Slow Cooking</a>
+														</div>
+													</div>
+													<div class="filter-list">
+														<div class="product-list-wrapper">
+															<ul class="product-list clearfix">
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef1.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef2.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef3.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef4.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef5.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef6.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef7.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef8.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef1.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef2.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef3.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef4.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef5.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef6.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef7.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef8.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef1.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef2.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+												<div class="popup-wrapper">
+													<div class="overlay"></div>
+													<div class="product-detail-wrapper">
+														<div class="product-detail">
+															<img src="images/beef/goods-popup.png" alt="" width="330" height="240" />
+															<a href="#" class="more">MORE INFO</a>
+														</div>
+														<a href="#" class="close">X</a>
+													</div>
+												</div>
+											</div>
+											<div class="category-tab scrollable" id="tab-cooking">
+												<div class="scroll-section">
+													<div class="flexslider-cooking">
+														<ul class="slides">
+															<li>
+																<img src="images/beef/recipe-banner1.jpg" />
+															</li>
+															<li>
+																<img src="images/beef/recipe-banner1.jpg" />
+															</li>
+															<li>
+																<img src="images/beef/recipe-banner1.jpg" />
+															</li>
+															<li>
+																<img src="images/beef/recipe-banner1.jpg" />
+															</li>
+														</ul>
+													</div>
+													<h4>
+														<img src="images/beef/beef-choice.png" width="660" height="26" alt="" />
+													</h4>
+												</div>
+												<div class="scroll-section">
+													<div class="filter-nav">
+														<div class="filter-main filter-cooking">
+															<a href="#" class="all">all</a>
+															<a href="#" class="quickeasy">rib</a>
+															<a href="#" class="grilling">loin</a>
+															<a href="#" class="roasting">sirloin</a>
+															<a href="#" class="slowcooking">round</a>
+															<a href="#" class="strifrying">shank</a>
+															<a href="#" class="marinating">other</a>
+														</div>
+														<div class="filter-sub">
+															<span>COOKING METHOD:</span>
+															<a href="#" class="currentSelect">All</a>
+															<a href="#">Rib</a>
+															<a href="#">Loin</a>
+															<a href="#">SirLoin</a>
+															<a href="#">Round</a>
+															<a href="#">Shank</a>
+															<a href="#">Other</a>
+														</div>
+													</div>
+													<div class="filter-list">
+														<div class="recipes-list-wrapper">
+															<ul class="recipes-list clearfix">
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef-recipe1.jpg" alt="" width="216" height="170"></a>
+																	<p class="recipe-name">
+																		<a href="#">Spaghetti Bolognese</a>
+																	</p>
+																	<p>
+																		<span class="recipe-serves">Serves 12</span>
+																		<span class="recipe-hours">1h 45m</span>
+																	</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef-recipe2.jpg" alt="" width="216" height="170"></a>
+																	<p class="recipe-name">
+																		<a href="#">Roast fore rib of beef with g...</a>
+																	</p>
+																	<p>
+																		<span class="recipe-serves">Serves 12</span>
+																		<span class="recipe-hours">1h 45m</span>
+																	</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef-recipe3.jpg" alt="" width="216" height="170"></a>
+																	<p class="recipe-name">
+																		<a href="#">Reuben-ish sandwich</a>
+																	</p>
+																	<p>
+																		<span class="recipe-serves">Serves 12</span>
+																		<span class="recipe-hours">1h 45m</span>
+																	</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef-recipe4.jpg" alt="" width="216" height="170"></a>
+																	<p class="recipe-name">
+																		<a href="#">Spaghetti Bolognese</a>
+																	</p>
+																	<p>
+																		<span class="recipe-serves">Serves 12</span>
+																		<span class="recipe-hours">1h 45m</span>
+																	</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef-recipe5.jpg" alt="" width="216" height="170"></a>
+																	<p class="recipe-name">
+																		<a href="#">Spaghetti Bolognese</a>
+																	</p>
+																	<p>
+																		<span class="recipe-serves">Serves 12</span>
+																		<span class="recipe-hours">1h 45m</span>
+																	</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef-recipe6.jpg" alt="" width="216" height="170"></a>
+																	<p class="recipe-name">
+																		<a href="#">Spaghetti Bolognese</a>
+																	</p>
+																	<p>
+																		<span class="recipe-serves">Serves 12</span>
+																		<span class="recipe-hours">1h 45m</span>
+																	</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef-recipe5.jpg" alt="" width="216" height="170"></a>
+																	<p class="recipe-name">
+																		<a href="#">Spaghetti Bolognese</a>
+																	</p>
+																	<p>
+																		<span class="recipe-serves">Serves 12</span>
+																		<span class="recipe-hours">1h 45m</span>
+																	</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef-recipe6.jpg" alt="" width="216" height="170"></a>
+																	<p class="recipe-name">
+																		<a href="#">Spaghetti Bolognese</a>
+																	</p>
+																	<p>
+																		<span class="recipe-serves">Serves 12</span>
+																		<span class="recipe-hours">1h 45m</span>
+																	</p>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+												<div class="popup-wrapper">
+													<div class="overlay"></div>
+													<div class="recipe-detail-wrapper">
+														<div class="recipe-detail">
+															<div class="recipe-detail-left">
+																<div class="recipe-name">
+																	<img src="images/beef/hamburger.jpg" width="330" height="260" alt="" />
+																</div>
+																<div class="recipe-tips">
+																	<span class="recipe-serves">Serves 12</span>
+																	<span class="recipe-hours">1h 45m</span>
+																</div>
+																<p class="recipe-desc">
+																	Although it is American fast food chains that have brought it to so many places around the globe, the name itself is there to remind us where it acquired the name – the seaport town of Hamburg.
+																</p>
+															</div>
+															<div class="recipe-detail-right">
+																<div class="recipe-name">Pan Grilled Hamburger with Balsamic Onions and Peppers</div>
+																<div class="recipe-info">
+																	<div class="recipe-tab-wrapper">
+																		<ul class="recipe-tab-nav clearfix">
+																			<li class="highlight">
+																				INGREDIENTS
+																				<span class="triangle"></span>
+																			</li>
+																			<li>
+																				DIRECTIONS
+																				<span class="triangle"></span>
+																			</li>
+																		</ul>
+																		<div class="recipe-tab-content">
+																			<div class="recipe-tab-scroll">
+																				<ol class="recipe-ingredient">
+																					<li>18g ground beef with 25% fat</li>
+																					<li>1 hamburger bun</li>
+																					<li>romain lettuce as needed</li>
+																					<li>1 large ripe tomato</li>
+																					<li>1 medium sized yellow onion</li>
+																					<li>1 red bell pepper</li>
+																					<li>2tbsp balsamic vinegar</li>
+																					<li>salt</li>
+																					<li>Mayonnaise</li>
+																					<li>Dijon mustard</li>
+																					<li>fresh ground black pepper as needed</li>
+																				</ol>
+																			</div>
+																			<div class="recipe-tab-scroll" style="visibility: hidden;">
+																				<ol class="recipe-direction">
+																					<li>
+																						Slice the onion and bell pepper into rings 1cm thick. Heat a sauté pan and drizzle in olive oil to coat the bottom of the pan. Once the oil is hot, add the onion and bell pepper and cook for about 3 minutes until the vegetables begin to soften. Add the balsamic vinegar and reduce to medium heat and cook until the balsamic vinegar has completely reduced and evaporated. Remove from the heat and season with salt and pepper. Set aside.
+																					</li>
+																					<li>
+																						Mix ground beef with your hands to form a patty. Season it with salt and pepper and set aside.
+																					</li>
+																					<li>
+																						Heat a non-stick grill pan over medium-high heat. Rub both sides of each hamburger patty with olive oil and place in the hot pan. Cook to desired doneness (about 2 to 3 minutes on each side for medium).
+																					</li>
+																					<li>
+																						While the patty is cooking slice the burger bun, tomato and prepare the lettuce.
+																					</li>
+																					<li>
+																						Once the hamburger is finished, place the patty on one of the buns and top with the balsamic onions and peppers. Serve with the lettuce, tomato, mustard and mayonnaise.
+																					</li>
+																				</ol>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<a href="#" class="close">X</a>
+													</div>
+												</div>
+											</div>
+											<div class="category-tab" id="tab-health">
+												<img src="images/beef/beef-health.png" alt=""  width="711" height="514" />
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sub-section" id="pavilion-pork">
+									<div class="category-sidebar">
+										<h2 class="category-logo">
+											<img src="images/beef/beef-logo.png" width="126" height="53" alt="pork Logo"></h2>
+										<ul class="category-nav">
+											<li class="highlight">
+												<a href="#">choices of pork</a>
+											</li>
+											<li>
+												<a href="#">cooking of pork</a>
+											</li>
+											<li>
+												<a href="#">pork's nutrients</a>
+											</li>
+										</ul>
+									</div>
+									<div class="category-content">
+										<h3 class="category-title">
+											<img src="images/beef/beef-title1.png" height="33" alt="Pork Cut"></h3>
+										<div class="category-tab-wrapper">
+											<div class="category-tab scrollable" id="tab-choice">
+												<div class="scroll-section">
+													<img src="images/beef/beef-cut.png" width="660" height="230" alt="" />
+													<h4>
+														<img src="images/beef/beef-choice.png" width="660" height="26" alt="choice of beef" />
+													</h4>
+													<div class="flexslider-choice carousel">
+														<ul class="slides">
+															<li>
+																<a href="#">
+																	<img src="images/beef/beef1.jpg" width="140" height="140" alt=""></a>
+																<p class="product-name">
+																	<a href="#">Domestic Beef Topside Cube</a>
+																</p>
+																<p class="product-price">￥33.50</p>
+															</li>
+															<li>
+																<a href="#">
+																	<img src="images/beef/beef2.jpg" width="140" height="140" alt=""></a>
+																<p class="product-name">
+																	<a href="#">Domestic Beef Topside Cube</a>
+																</p>
+																<p class="product-price">￥33.50</p>
+															</li>
+															<li>
+																<a href="#">
+																	<img src="images/beef/beef3.jpg" width="140" height="140" alt=""></a>
+																<p class="product-name">
+																	<a href="#">Domestic Beef Topside Cube</a>
+																</p>
+																<p class="product-price">￥33.50</p>
+															</li>
+															<li>
+																<a href="#">
+																	<img src="images/beef/beef4.jpg" width="140" height="140" alt=""></a>
+																<p class="product-name">
+																	<a href="#">Domestic Beef Topside Cube</a>
+																</p>
+																<p class="product-price">￥33.50</p>
+															</li>
+															<li>
+																<a href="#">
+																	<img src="images/beef/beef3.jpg" width="140" height="140" alt=""></a>
+																<p class="product-name">
+																	<a href="#">Domestic Beef Topside Cube</a>
+																</p>
+																<p class="product-price">￥33.50</p>
+															</li>
+															<li>
+																<a href="#">
+																	<img src="images/beef/beef4.jpg" width="140" height="140" alt=""></a>
+																<p class="product-name">
+																	<a href="#">Domestic Beef Topside Cube</a>
+																</p>
+																<p class="product-price">￥33.50</p>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<div class="scroll-section">
+													<div class="filter-nav">
+														<div class="filter-main filter-choice">
+															<a href="#" class="all">all</a>
+															<a href="#" class="rib">rib</a>
+															<a href="#" class="loin">loin</a>
+															<a href="#" class="sirloin">sirloin</a>
+															<a href="#" class="round">round</a>
+															<a href="#" class="shank">shank</a>
+															<a href="#" class="other">other</a>
+														</div>
+														<div class="filter-sub">
+															<span>COOKING METHOD:</span>
+															<a href="#" class="currentSelect">All</a>
+															<a href="#">Grill</a>
+															<a href="#">Marinate</a>
+															<a href="#">Stri-Fry</a>
+															<a href="#">Quick&amp;Easy</a>
+															<a href="#">Roast</a>
+															<a href="#">Slow Cooking</a>
+														</div>
+													</div>
+													<div class="filter-list">
+														<div class="product-list-wrapper">
+															<ul class="product-list clearfix">
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef1.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef2.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef3.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef4.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef5.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef6.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef7.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef8.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef1.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef2.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef3.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef4.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef5.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef6.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef7.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef8.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef1.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef2.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+												<div class="popup-wrapper">
+													<div class="overlay"></div>
+													<div class="product-detail-wrapper">
+														<div class="product-detail">
+															<img src="images/beef/goods-popup.png" alt="" width="330" height="240" />
+															<a href="#" class="more">MORE INFO</a>
+														</div>
+														<a href="#" class="close">X</a>
+													</div>
+												</div>
+											</div>
+											<div class="category-tab scrollable" id="tab-cooking">
+												<div class="scroll-section">
+													<div class="flexslider-cooking">
+														<ul class="slides">
+															<li>
+																<img src="images/beef/recipe-banner1.jpg" />
+															</li>
+															<li>
+																<img src="images/beef/recipe-banner1.jpg" />
+															</li>
+															<li>
+																<img src="images/beef/recipe-banner1.jpg" />
+															</li>
+															<li>
+																<img src="images/beef/recipe-banner1.jpg" />
+															</li>
+														</ul>
+													</div>
+													<h4>
+														<img src="images/beef/beef-choice.png" width="660" height="26" alt="" />
+													</h4>
+												</div>
+												<div class="scroll-section">
+													<div class="filter-nav">
+														<div class="filter-main filter-cooking">
+															<a href="#" class="all">all</a>
+															<a href="#" class="quickeasy">rib</a>
+															<a href="#" class="grilling">loin</a>
+															<a href="#" class="roasting">sirloin</a>
+															<a href="#" class="slowcooking">round</a>
+															<a href="#" class="strifrying">shank</a>
+															<a href="#" class="marinating">other</a>
+														</div>
+														<div class="filter-sub">
+															<span>COOKING METHOD:</span>
+															<a href="#" class="currentSelect">All</a>
+															<a href="#">Rib</a>
+															<a href="#">Loin</a>
+															<a href="#">SirLoin</a>
+															<a href="#">Round</a>
+															<a href="#">Shank</a>
+															<a href="#">Other</a>
+														</div>
+													</div>
+													<div class="filter-list">
+														<div class="recipes-list-wrapper">
+															<ul class="recipes-list clearfix">
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef-recipe1.jpg" alt="" width="216" height="170"></a>
+																	<p class="recipe-name">
+																		<a href="#">Spaghetti Bolognese</a>
+																	</p>
+																	<p>
+																		<span class="recipe-serves">Serves 12</span>
+																		<span class="recipe-hours">1h 45m</span>
+																	</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef-recipe2.jpg" alt="" width="216" height="170"></a>
+																	<p class="recipe-name">
+																		<a href="#">Roast fore rib of beef with g...</a>
+																	</p>
+																	<p>
+																		<span class="recipe-serves">Serves 12</span>
+																		<span class="recipe-hours">1h 45m</span>
+																	</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef-recipe3.jpg" alt="" width="216" height="170"></a>
+																	<p class="recipe-name">
+																		<a href="#">Reuben-ish sandwich</a>
+																	</p>
+																	<p>
+																		<span class="recipe-serves">Serves 12</span>
+																		<span class="recipe-hours">1h 45m</span>
+																	</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef-recipe4.jpg" alt="" width="216" height="170"></a>
+																	<p class="recipe-name">
+																		<a href="#">Spaghetti Bolognese</a>
+																	</p>
+																	<p>
+																		<span class="recipe-serves">Serves 12</span>
+																		<span class="recipe-hours">1h 45m</span>
+																	</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef-recipe5.jpg" alt="" width="216" height="170"></a>
+																	<p class="recipe-name">
+																		<a href="#">Spaghetti Bolognese</a>
+																	</p>
+																	<p>
+																		<span class="recipe-serves">Serves 12</span>
+																		<span class="recipe-hours">1h 45m</span>
+																	</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef-recipe6.jpg" alt="" width="216" height="170"></a>
+																	<p class="recipe-name">
+																		<a href="#">Spaghetti Bolognese</a>
+																	</p>
+																	<p>
+																		<span class="recipe-serves">Serves 12</span>
+																		<span class="recipe-hours">1h 45m</span>
+																	</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef-recipe5.jpg" alt="" width="216" height="170"></a>
+																	<p class="recipe-name">
+																		<a href="#">Spaghetti Bolognese</a>
+																	</p>
+																	<p>
+																		<span class="recipe-serves">Serves 12</span>
+																		<span class="recipe-hours">1h 45m</span>
+																	</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef-recipe6.jpg" alt="" width="216" height="170"></a>
+																	<p class="recipe-name">
+																		<a href="#">Spaghetti Bolognese</a>
+																	</p>
+																	<p>
+																		<span class="recipe-serves">Serves 12</span>
+																		<span class="recipe-hours">1h 45m</span>
+																	</p>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+												<div class="popup-wrapper">
+													<div class="overlay"></div>
+													<div class="recipe-detail-wrapper">
+														<div class="recipe-detail">
+															<div class="recipe-detail-left">
+																<div class="recipe-name">
+																	<img src="images/beef/hamburger.jpg" width="330" height="260" alt="" />
+																</div>
+																<div class="recipe-tips">
+																	<span class="recipe-serves">Serves 12</span>
+																	<span class="recipe-hours">1h 45m</span>
+																</div>
+																<p class="recipe-desc">
+																	Although it is American fast food chains that have brought it to so many places around the globe, the name itself is there to remind us where it acquired the name – the seaport town of Hamburg.
+																</p>
+															</div>
+															<div class="recipe-detail-right">
+																<div class="recipe-name">Pan Grilled Hamburger with Balsamic Onions and Peppers</div>
+																<div class="recipe-info">
+																	<div class="recipe-tab-wrapper">
+																		<ul class="recipe-tab-nav clearfix">
+																			<li class="highlight">
+																				INGREDIENTS
+																				<span class="triangle"></span>
+																			</li>
+																			<li>
+																				DIRECTIONS
+																				<span class="triangle"></span>
+																			</li>
+																		</ul>
+																		<div class="recipe-tab-content">
+																			<div class="recipe-tab-scroll">
+																				<ol class="recipe-ingredient">
+																					<li>18g ground beef with 25% fat</li>
+																					<li>1 hamburger bun</li>
+																					<li>romain lettuce as needed</li>
+																					<li>1 large ripe tomato</li>
+																					<li>1 medium sized yellow onion</li>
+																					<li>1 red bell pepper</li>
+																					<li>2tbsp balsamic vinegar</li>
+																					<li>salt</li>
+																					<li>Mayonnaise</li>
+																					<li>Dijon mustard</li>
+																					<li>fresh ground black pepper as needed</li>
+																				</ol>
+																			</div>
+																			<div class="recipe-tab-scroll" style="visibility: hidden;">
+																				<ol class="recipe-direction">
+																					<li>
+																						Slice the onion and bell pepper into rings 1cm thick. Heat a sauté pan and drizzle in olive oil to coat the bottom of the pan. Once the oil is hot, add the onion and bell pepper and cook for about 3 minutes until the vegetables begin to soften. Add the balsamic vinegar and reduce to medium heat and cook until the balsamic vinegar has completely reduced and evaporated. Remove from the heat and season with salt and pepper. Set aside.
+																					</li>
+																					<li>
+																						Mix ground beef with your hands to form a patty. Season it with salt and pepper and set aside.
+																					</li>
+																					<li>
+																						Heat a non-stick grill pan over medium-high heat. Rub both sides of each hamburger patty with olive oil and place in the hot pan. Cook to desired doneness (about 2 to 3 minutes on each side for medium).
+																					</li>
+																					<li>
+																						While the patty is cooking slice the burger bun, tomato and prepare the lettuce.
+																					</li>
+																					<li>
+																						Once the hamburger is finished, place the patty on one of the buns and top with the balsamic onions and peppers. Serve with the lettuce, tomato, mustard and mayonnaise.
+																					</li>
+																				</ol>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<a href="#" class="close">X</a>
+													</div>
+												</div>
+											</div>
+											<div class="category-tab" id="tab-health">
+												<img src="images/beef/beef-health.png" alt=""  width="711" height="514" />
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sub-section" id="pavilion-poultry">
+									<div class="category-sidebar">
+										<h2 class="category-logo">
+											<img src="images/beef/beef-logo.png" width="126" height="53" alt="poultry Logo"></h2>
+										<ul class="category-nav">
+											<li class="highlight">
+												<a href="#">choices of poultry</a>
+											</li>
+											<li>
+												<a href="#">cooking of poultry</a>
+											</li>
+											<li>
+												<a href="#">poultry's nutrients</a>
+											</li>
+										</ul>
+									</div>
+									<div class="category-content">
+										<h3 class="category-title">
+											<img src="images/beef/beef-title1.png" height="33" alt="Poultry Cut"></h3>
+										<div class="category-tab-wrapper">
+											<div class="category-tab scrollable" id="tab-choice">
+												<div class="scroll-section">
+													<img src="images/beef/beef-cut.png" width="660" height="230" alt="" />
+													<h4>
+														<img src="images/beef/beef-choice.png" width="660" height="26" alt="choice of beef" />
+													</h4>
+													<div class="flexslider-choice carousel">
+														<ul class="slides">
+															<li>
+																<a href="#">
+																	<img src="images/beef/beef1.jpg" width="140" height="140" alt=""></a>
+																<p class="product-name">
+																	<a href="#">Domestic Beef Topside Cube</a>
+																</p>
+																<p class="product-price">￥33.50</p>
+															</li>
+															<li>
+																<a href="#">
+																	<img src="images/beef/beef2.jpg" width="140" height="140" alt=""></a>
+																<p class="product-name">
+																	<a href="#">Domestic Beef Topside Cube</a>
+																</p>
+																<p class="product-price">￥33.50</p>
+															</li>
+															<li>
+																<a href="#">
+																	<img src="images/beef/beef3.jpg" width="140" height="140" alt=""></a>
+																<p class="product-name">
+																	<a href="#">Domestic Beef Topside Cube</a>
+																</p>
+																<p class="product-price">￥33.50</p>
+															</li>
+															<li>
+																<a href="#">
+																	<img src="images/beef/beef4.jpg" width="140" height="140" alt=""></a>
+																<p class="product-name">
+																	<a href="#">Domestic Beef Topside Cube</a>
+																</p>
+																<p class="product-price">￥33.50</p>
+															</li>
+															<li>
+																<a href="#">
+																	<img src="images/beef/beef3.jpg" width="140" height="140" alt=""></a>
+																<p class="product-name">
+																	<a href="#">Domestic Beef Topside Cube</a>
+																</p>
+																<p class="product-price">￥33.50</p>
+															</li>
+															<li>
+																<a href="#">
+																	<img src="images/beef/beef4.jpg" width="140" height="140" alt=""></a>
+																<p class="product-name">
+																	<a href="#">Domestic Beef Topside Cube</a>
+																</p>
+																<p class="product-price">￥33.50</p>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<div class="scroll-section">
+													<div class="filter-nav">
+														<div class="filter-main filter-choice">
+															<a href="#" class="all">all</a>
+															<a href="#" class="rib">rib</a>
+															<a href="#" class="loin">loin</a>
+															<a href="#" class="sirloin">sirloin</a>
+															<a href="#" class="round">round</a>
+															<a href="#" class="shank">shank</a>
+															<a href="#" class="other">other</a>
+														</div>
+														<div class="filter-sub">
+															<span>COOKING METHOD:</span>
+															<a href="#" class="currentSelect">All</a>
+															<a href="#">Grill</a>
+															<a href="#">Marinate</a>
+															<a href="#">Stri-Fry</a>
+															<a href="#">Quick&amp;Easy</a>
+															<a href="#">Roast</a>
+															<a href="#">Slow Cooking</a>
+														</div>
+													</div>
+													<div class="filter-list">
+														<div class="product-list-wrapper">
+															<ul class="product-list clearfix">
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef1.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef2.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef3.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef4.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef5.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef6.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef7.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef8.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef1.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef2.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef3.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef4.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef5.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef6.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef7.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef8.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef1.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef2.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+												<div class="popup-wrapper">
+													<div class="overlay"></div>
+													<div class="product-detail-wrapper">
+														<div class="product-detail">
+															<img src="images/beef/goods-popup.png" alt="" width="330" height="240" />
+															<a href="#" class="more">MORE INFO</a>
+														</div>
+														<a href="#" class="close">X</a>
+													</div>
+												</div>
+											</div>
+											<div class="category-tab scrollable" id="tab-cooking">
+												<div class="scroll-section">
+													<div class="flexslider-cooking">
+														<ul class="slides">
+															<li>
+																<img src="images/beef/recipe-banner1.jpg" />
+															</li>
+															<li>
+																<img src="images/beef/recipe-banner1.jpg" />
+															</li>
+															<li>
+																<img src="images/beef/recipe-banner1.jpg" />
+															</li>
+															<li>
+																<img src="images/beef/recipe-banner1.jpg" />
+															</li>
+														</ul>
+													</div>
+													<h4>
+														<img src="images/beef/beef-choice.png" width="660" height="26" alt="" />
+													</h4>
+												</div>
+												<div class="scroll-section">
+													<div class="filter-nav">
+														<div class="filter-main filter-cooking">
+															<a href="#" class="all">all</a>
+															<a href="#" class="quickeasy">rib</a>
+															<a href="#" class="grilling">loin</a>
+															<a href="#" class="roasting">sirloin</a>
+															<a href="#" class="slowcooking">round</a>
+															<a href="#" class="strifrying">shank</a>
+															<a href="#" class="marinating">other</a>
+														</div>
+														<div class="filter-sub">
+															<span>COOKING METHOD:</span>
+															<a href="#" class="currentSelect">All</a>
+															<a href="#">Rib</a>
+															<a href="#">Loin</a>
+															<a href="#">SirLoin</a>
+															<a href="#">Round</a>
+															<a href="#">Shank</a>
+															<a href="#">Other</a>
+														</div>
+													</div>
+													<div class="filter-list">
+														<div class="recipes-list-wrapper">
+															<ul class="recipes-list clearfix">
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef-recipe1.jpg" alt="" width="216" height="170"></a>
+																	<p class="recipe-name">
+																		<a href="#">Spaghetti Bolognese</a>
+																	</p>
+																	<p>
+																		<span class="recipe-serves">Serves 12</span>
+																		<span class="recipe-hours">1h 45m</span>
+																	</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef-recipe2.jpg" alt="" width="216" height="170"></a>
+																	<p class="recipe-name">
+																		<a href="#">Roast fore rib of beef with g...</a>
+																	</p>
+																	<p>
+																		<span class="recipe-serves">Serves 12</span>
+																		<span class="recipe-hours">1h 45m</span>
+																	</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef-recipe3.jpg" alt="" width="216" height="170"></a>
+																	<p class="recipe-name">
+																		<a href="#">Reuben-ish sandwich</a>
+																	</p>
+																	<p>
+																		<span class="recipe-serves">Serves 12</span>
+																		<span class="recipe-hours">1h 45m</span>
+																	</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef-recipe4.jpg" alt="" width="216" height="170"></a>
+																	<p class="recipe-name">
+																		<a href="#">Spaghetti Bolognese</a>
+																	</p>
+																	<p>
+																		<span class="recipe-serves">Serves 12</span>
+																		<span class="recipe-hours">1h 45m</span>
+																	</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef-recipe5.jpg" alt="" width="216" height="170"></a>
+																	<p class="recipe-name">
+																		<a href="#">Spaghetti Bolognese</a>
+																	</p>
+																	<p>
+																		<span class="recipe-serves">Serves 12</span>
+																		<span class="recipe-hours">1h 45m</span>
+																	</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef-recipe6.jpg" alt="" width="216" height="170"></a>
+																	<p class="recipe-name">
+																		<a href="#">Spaghetti Bolognese</a>
+																	</p>
+																	<p>
+																		<span class="recipe-serves">Serves 12</span>
+																		<span class="recipe-hours">1h 45m</span>
+																	</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef-recipe5.jpg" alt="" width="216" height="170"></a>
+																	<p class="recipe-name">
+																		<a href="#">Spaghetti Bolognese</a>
+																	</p>
+																	<p>
+																		<span class="recipe-serves">Serves 12</span>
+																		<span class="recipe-hours">1h 45m</span>
+																	</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef-recipe6.jpg" alt="" width="216" height="170"></a>
+																	<p class="recipe-name">
+																		<a href="#">Spaghetti Bolognese</a>
+																	</p>
+																	<p>
+																		<span class="recipe-serves">Serves 12</span>
+																		<span class="recipe-hours">1h 45m</span>
+																	</p>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+												<div class="popup-wrapper">
+													<div class="overlay"></div>
+													<div class="recipe-detail-wrapper">
+														<div class="recipe-detail">
+															<div class="recipe-detail-left">
+																<div class="recipe-name">
+																	<img src="images/beef/hamburger.jpg" width="330" height="260" alt="" />
+																</div>
+																<div class="recipe-tips">
+																	<span class="recipe-serves">Serves 12</span>
+																	<span class="recipe-hours">1h 45m</span>
+																</div>
+																<p class="recipe-desc">
+																	Although it is American fast food chains that have brought it to so many places around the globe, the name itself is there to remind us where it acquired the name – the seaport town of Hamburg.
+																</p>
+															</div>
+															<div class="recipe-detail-right">
+																<div class="recipe-name">Pan Grilled Hamburger with Balsamic Onions and Peppers</div>
+																<div class="recipe-info">
+																	<div class="recipe-tab-wrapper">
+																		<ul class="recipe-tab-nav clearfix">
+																			<li class="highlight">
+																				INGREDIENTS
+																				<span class="triangle"></span>
+																			</li>
+																			<li>
+																				DIRECTIONS
+																				<span class="triangle"></span>
+																			</li>
+																		</ul>
+																		<div class="recipe-tab-content">
+																			<div class="recipe-tab-scroll">
+																				<ol class="recipe-ingredient">
+																					<li>18g ground beef with 25% fat</li>
+																					<li>1 hamburger bun</li>
+																					<li>romain lettuce as needed</li>
+																					<li>1 large ripe tomato</li>
+																					<li>1 medium sized yellow onion</li>
+																					<li>1 red bell pepper</li>
+																					<li>2tbsp balsamic vinegar</li>
+																					<li>salt</li>
+																					<li>Mayonnaise</li>
+																					<li>Dijon mustard</li>
+																					<li>fresh ground black pepper as needed</li>
+																				</ol>
+																			</div>
+																			<div class="recipe-tab-scroll" style="visibility: hidden;">
+																				<ol class="recipe-direction">
+																					<li>
+																						Slice the onion and bell pepper into rings 1cm thick. Heat a sauté pan and drizzle in olive oil to coat the bottom of the pan. Once the oil is hot, add the onion and bell pepper and cook for about 3 minutes until the vegetables begin to soften. Add the balsamic vinegar and reduce to medium heat and cook until the balsamic vinegar has completely reduced and evaporated. Remove from the heat and season with salt and pepper. Set aside.
+																					</li>
+																					<li>
+																						Mix ground beef with your hands to form a patty. Season it with salt and pepper and set aside.
+																					</li>
+																					<li>
+																						Heat a non-stick grill pan over medium-high heat. Rub both sides of each hamburger patty with olive oil and place in the hot pan. Cook to desired doneness (about 2 to 3 minutes on each side for medium).
+																					</li>
+																					<li>
+																						While the patty is cooking slice the burger bun, tomato and prepare the lettuce.
+																					</li>
+																					<li>
+																						Once the hamburger is finished, place the patty on one of the buns and top with the balsamic onions and peppers. Serve with the lettuce, tomato, mustard and mayonnaise.
+																					</li>
+																				</ol>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<a href="#" class="close">X</a>
+													</div>
+												</div>
+											</div>
+											<div class="category-tab" id="tab-health">
+												<img src="images/beef/beef-health.png" alt=""  width="711" height="514" />
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sub-section" id="pavilion-ground">
+									<div class="category-sidebar">
+										<h2 class="category-logo">
+											<img src="images/beef/beef-logo.png" width="126" height="53" alt="ground Logo"></h2>
+										<ul class="category-nav">
+											<li class="highlight">
+												<a href="#">choices of ground</a>
+											</li>
+											<li>
+												<a href="#">cooking of ground</a>
+											</li>
+											<li>
+												<a href="#">ground's nutrients</a>
+											</li>
+										</ul>
+									</div>
+									<div class="category-content">
+										<h3 class="category-title">
+											<img src="images/beef/beef-title1.png" height="33" alt="Ground Cut"></h3>
+										<div class="category-tab-wrapper">
+											<div class="category-tab scrollable" id="tab-choice">
+												<div class="scroll-section">
+													<img src="images/beef/beef-cut.png" width="660" height="230" alt="" />
+													<h4>
+														<img src="images/beef/beef-choice.png" width="660" height="26" alt="choice of beef" />
+													</h4>
+													<div class="flexslider-choice carousel">
+														<ul class="slides">
+															<li>
+																<a href="#">
+																	<img src="images/beef/beef1.jpg" width="140" height="140" alt=""></a>
+																<p class="product-name">
+																	<a href="#">Domestic Beef Topside Cube</a>
+																</p>
+																<p class="product-price">￥33.50</p>
+															</li>
+															<li>
+																<a href="#">
+																	<img src="images/beef/beef2.jpg" width="140" height="140" alt=""></a>
+																<p class="product-name">
+																	<a href="#">Domestic Beef Topside Cube</a>
+																</p>
+																<p class="product-price">￥33.50</p>
+															</li>
+															<li>
+																<a href="#">
+																	<img src="images/beef/beef3.jpg" width="140" height="140" alt=""></a>
+																<p class="product-name">
+																	<a href="#">Domestic Beef Topside Cube</a>
+																</p>
+																<p class="product-price">￥33.50</p>
+															</li>
+															<li>
+																<a href="#">
+																	<img src="images/beef/beef4.jpg" width="140" height="140" alt=""></a>
+																<p class="product-name">
+																	<a href="#">Domestic Beef Topside Cube</a>
+																</p>
+																<p class="product-price">￥33.50</p>
+															</li>
+															<li>
+																<a href="#">
+																	<img src="images/beef/beef3.jpg" width="140" height="140" alt=""></a>
+																<p class="product-name">
+																	<a href="#">Domestic Beef Topside Cube</a>
+																</p>
+																<p class="product-price">￥33.50</p>
+															</li>
+															<li>
+																<a href="#">
+																	<img src="images/beef/beef4.jpg" width="140" height="140" alt=""></a>
+																<p class="product-name">
+																	<a href="#">Domestic Beef Topside Cube</a>
+																</p>
+																<p class="product-price">￥33.50</p>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<div class="scroll-section">
+													<div class="filter-nav">
+														<div class="filter-main filter-choice">
+															<a href="#" class="all">all</a>
+															<a href="#" class="rib">rib</a>
+															<a href="#" class="loin">loin</a>
+															<a href="#" class="sirloin">sirloin</a>
+															<a href="#" class="round">round</a>
+															<a href="#" class="shank">shank</a>
+															<a href="#" class="other">other</a>
+														</div>
+														<div class="filter-sub">
+															<span>COOKING METHOD:</span>
+															<a href="#" class="currentSelect">All</a>
+															<a href="#">Grill</a>
+															<a href="#">Marinate</a>
+															<a href="#">Stri-Fry</a>
+															<a href="#">Quick&amp;Easy</a>
+															<a href="#">Roast</a>
+															<a href="#">Slow Cooking</a>
+														</div>
+													</div>
+													<div class="filter-list">
+														<div class="product-list-wrapper">
+															<ul class="product-list clearfix">
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef1.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef2.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef3.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef4.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef5.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef6.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef7.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef8.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef1.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef2.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef3.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef4.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef5.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef6.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef7.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef8.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef1.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef2.jpg" width="140" height="140" alt=""></a>
+																	<p class="product-name">
+																		<a href="#">Domestic Beef Topside Cube</a>
+																	</p>
+																	<p class="product-price">￥33.50</p>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+												<div class="popup-wrapper">
+													<div class="overlay"></div>
+													<div class="product-detail-wrapper">
+														<div class="product-detail">
+															<img src="images/beef/goods-popup.png" alt="" width="330" height="240" />
+															<a href="#" class="more">MORE INFO</a>
+														</div>
+														<a href="#" class="close">X</a>
+													</div>
+												</div>
+											</div>
+											<div class="category-tab scrollable" id="tab-cooking">
+												<div class="scroll-section">
+													<div class="flexslider-cooking">
+														<ul class="slides">
+															<li>
+																<img src="images/beef/recipe-banner1.jpg" />
+															</li>
+															<li>
+																<img src="images/beef/recipe-banner1.jpg" />
+															</li>
+															<li>
+																<img src="images/beef/recipe-banner1.jpg" />
+															</li>
+															<li>
+																<img src="images/beef/recipe-banner1.jpg" />
+															</li>
+														</ul>
+													</div>
+													<h4>
+														<img src="images/beef/beef-choice.png" width="660" height="26" alt="" />
+													</h4>
+												</div>
+												<div class="scroll-section">
+													<div class="filter-nav">
+														<div class="filter-main filter-cooking">
+															<a href="#" class="all">all</a>
+															<a href="#" class="quickeasy">rib</a>
+															<a href="#" class="grilling">loin</a>
+															<a href="#" class="roasting">sirloin</a>
+															<a href="#" class="slowcooking">round</a>
+															<a href="#" class="strifrying">shank</a>
+															<a href="#" class="marinating">other</a>
+														</div>
+														<div class="filter-sub">
+															<span>COOKING METHOD:</span>
+															<a href="#" class="currentSelect">All</a>
+															<a href="#">Rib</a>
+															<a href="#">Loin</a>
+															<a href="#">SirLoin</a>
+															<a href="#">Round</a>
+															<a href="#">Shank</a>
+															<a href="#">Other</a>
+														</div>
+													</div>
+													<div class="filter-list">
+														<div class="recipes-list-wrapper">
+															<ul class="recipes-list clearfix">
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef-recipe1.jpg" alt="" width="216" height="170"></a>
+																	<p class="recipe-name">
+																		<a href="#">Spaghetti Bolognese</a>
+																	</p>
+																	<p>
+																		<span class="recipe-serves">Serves 12</span>
+																		<span class="recipe-hours">1h 45m</span>
+																	</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef-recipe2.jpg" alt="" width="216" height="170"></a>
+																	<p class="recipe-name">
+																		<a href="#">Roast fore rib of beef with g...</a>
+																	</p>
+																	<p>
+																		<span class="recipe-serves">Serves 12</span>
+																		<span class="recipe-hours">1h 45m</span>
+																	</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef-recipe3.jpg" alt="" width="216" height="170"></a>
+																	<p class="recipe-name">
+																		<a href="#">Reuben-ish sandwich</a>
+																	</p>
+																	<p>
+																		<span class="recipe-serves">Serves 12</span>
+																		<span class="recipe-hours">1h 45m</span>
+																	</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef-recipe4.jpg" alt="" width="216" height="170"></a>
+																	<p class="recipe-name">
+																		<a href="#">Spaghetti Bolognese</a>
+																	</p>
+																	<p>
+																		<span class="recipe-serves">Serves 12</span>
+																		<span class="recipe-hours">1h 45m</span>
+																	</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef-recipe5.jpg" alt="" width="216" height="170"></a>
+																	<p class="recipe-name">
+																		<a href="#">Spaghetti Bolognese</a>
+																	</p>
+																	<p>
+																		<span class="recipe-serves">Serves 12</span>
+																		<span class="recipe-hours">1h 45m</span>
+																	</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef-recipe6.jpg" alt="" width="216" height="170"></a>
+																	<p class="recipe-name">
+																		<a href="#">Spaghetti Bolognese</a>
+																	</p>
+																	<p>
+																		<span class="recipe-serves">Serves 12</span>
+																		<span class="recipe-hours">1h 45m</span>
+																	</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef-recipe5.jpg" alt="" width="216" height="170"></a>
+																	<p class="recipe-name">
+																		<a href="#">Spaghetti Bolognese</a>
+																	</p>
+																	<p>
+																		<span class="recipe-serves">Serves 12</span>
+																		<span class="recipe-hours">1h 45m</span>
+																	</p>
+																</li>
+																<li>
+																	<a href="#">
+																		<img src="images/beef/beef-recipe6.jpg" alt="" width="216" height="170"></a>
+																	<p class="recipe-name">
+																		<a href="#">Spaghetti Bolognese</a>
+																	</p>
+																	<p>
+																		<span class="recipe-serves">Serves 12</span>
+																		<span class="recipe-hours">1h 45m</span>
+																	</p>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+												<div class="popup-wrapper">
+													<div class="overlay"></div>
+													<div class="recipe-detail-wrapper">
+														<div class="recipe-detail">
+															<div class="recipe-detail-left">
+																<div class="recipe-name">
+																	<img src="images/beef/hamburger.jpg" width="330" height="260" alt="" />
+																</div>
+																<div class="recipe-tips">
+																	<span class="recipe-serves">Serves 12</span>
+																	<span class="recipe-hours">1h 45m</span>
+																</div>
+																<p class="recipe-desc">
+																	Although it is American fast food chains that have brought it to so many places around the globe, the name itself is there to remind us where it acquired the name – the seaport town of Hamburg.
+																</p>
+															</div>
+															<div class="recipe-detail-right">
+																<div class="recipe-name">Pan Grilled Hamburger with Balsamic Onions and Peppers</div>
+																<div class="recipe-info">
+																	<div class="recipe-tab-wrapper">
+																		<ul class="recipe-tab-nav clearfix">
+																			<li class="highlight">
+																				INGREDIENTS
+																				<span class="triangle"></span>
+																			</li>
+																			<li>
+																				DIRECTIONS
+																				<span class="triangle"></span>
+																			</li>
+																		</ul>
+																		<div class="recipe-tab-content">
+																			<div class="recipe-tab-scroll">
+																				<ol class="recipe-ingredient">
+																					<li>18g ground beef with 25% fat</li>
+																					<li>1 hamburger bun</li>
+																					<li>romain lettuce as needed</li>
+																					<li>1 large ripe tomato</li>
+																					<li>1 medium sized yellow onion</li>
+																					<li>1 red bell pepper</li>
+																					<li>2tbsp balsamic vinegar</li>
+																					<li>salt</li>
+																					<li>Mayonnaise</li>
+																					<li>Dijon mustard</li>
+																					<li>fresh ground black pepper as needed</li>
+																				</ol>
+																			</div>
+																			<div class="recipe-tab-scroll" style="visibility: hidden;">
+																				<ol class="recipe-direction">
+																					<li>
+																						Slice the onion and bell pepper into rings 1cm thick. Heat a sauté pan and drizzle in olive oil to coat the bottom of the pan. Once the oil is hot, add the onion and bell pepper and cook for about 3 minutes until the vegetables begin to soften. Add the balsamic vinegar and reduce to medium heat and cook until the balsamic vinegar has completely reduced and evaporated. Remove from the heat and season with salt and pepper. Set aside.
+																					</li>
+																					<li>
+																						Mix ground beef with your hands to form a patty. Season it with salt and pepper and set aside.
+																					</li>
+																					<li>
+																						Heat a non-stick grill pan over medium-high heat. Rub both sides of each hamburger patty with olive oil and place in the hot pan. Cook to desired doneness (about 2 to 3 minutes on each side for medium).
+																					</li>
+																					<li>
+																						While the patty is cooking slice the burger bun, tomato and prepare the lettuce.
+																					</li>
+																					<li>
+																						Once the hamburger is finished, place the patty on one of the buns and top with the balsamic onions and peppers. Serve with the lettuce, tomato, mustard and mayonnaise.
+																					</li>
+																				</ol>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<a href="#" class="close">X</a>
+													</div>
+												</div>
+											</div>
+											<div class="category-tab" id="tab-health">
+												<img src="images/beef/beef-health.png" alt=""  width="711" height="514" />
+											</div>
+										</div>
+									</div>
+								</div>
+								<a href="#" class="slides-prev slides-direction" data-dir="prev">prev</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<div id="footer">
+		<div id="footer-wrapper" class="clearfix">
+			<div id="footer-left">
+				<table id="helpcenter-table">
+					<tr>
+						<th class="footer-icon1">Quick Start</th>
+						<th class="footer-icon2">Payment Methods</th>
+						<th class="footer-icon3">Delivery</th>
+						<th class="footer-icon4">After Service</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="http://www.cityshop.com.cn/helpcenter/register">Register</a>
+						</td>
+						<td>
+							<a href="http://www.cityshop.com.cn/helpcenter/cod">Cash On Delivery</a>
+						</td>
+						<td>
+							<a href="http://www.cityshop.com.cn/helpcenter/shanghai">Shanghai Delivery</a>
+						</td>
+						<td>
+							<a href="http://www.cityshop.com.cn/helpcenter/exchange">Returned of Purchase</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="http://www.cityshop.com.cn/helpcenter/progress">Shopping Progress</a>
+						</td>
+						<td>
+							<a href="http://www.cityshop.com.cn/helpcenter/online">Online Pay</a>
+						</td>
+						<td>
+							<a href="http://www.cityshop.com.cn/helpcenter/beijing">Beijing Delivery</a>
+						</td>
+						<td>
+							<a href="http://www.cityshop.com.cn/helpcenter/refund">Refund</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="http://www.cityshop.com.cn/helpcenter/faq">FAQ</a>
+						</td>
+						<td>
+							<a href="http://www.cityshop.com.cn/helpcenter/invoice">Invoice</a>
+						</td>
+						<td>
+							<a href="http://www.cityshop.com.cn/helpcenter/delivery">About Delivery</a>
+						</td>
+						<td>
+							<a href="http://www.cityshop.com.cn/helpcenter/service">Customer Service</a>
+						</td>
+					</tr>
+				</table>
+				<table id="aboutus-table">
+					<tr>
+						<td class="cell-container">
+							<a href="http://www.cityshop.com.cn/aboutus/about">About Us</a>
+						</td>
+						<td class="cell-container">
+							<a href="http://www.cityshop.com.cn/aboutus/contactus">Contact Us</a>
+						</td>
+						<td class="cell-container">
+							<a href="http://www.cityshop.com.cn/aboutus/joinus">Join Us</a>
+						</td>
+						<td class="cell-container">
+							<a href="http://www.cityshop.com.cn/aboutus/policy">Privacy Notice</a>
+						</td>
+						<td class="cell-container">
+							<a href="http://www.cityshop.com.cn/aboutus/terms">User Agreement</a>
+						</td>
+						<td class="cell-container">
+							<a href="http://www.cityshop.com.cn/aboutus/grouppurchase">Group Buying</a>
+						</td>
+						<td class="cell-container">
+							<a href="http://www.cityshop.com.cn/aboutus/sitemap">Site Map</a>
+						</td>
+						<td>
+							<a href="http://www.cityshop.com.cn/helpcenter/register">Help</a>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="8" class="copyright">
+							<span>Copyright Reserved 2005-2013</span>
+							<span class="copyright-statement">Shanghai City Supermarket Co., Ltd.</span>
+							<span>ICP:09042494</span>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div id="footer-right">
+				<table id="hotline-table">
+					<tr>
+						<td class="footer-icon1">
+							<p>
+								<span class="footer-title">ORDER HOTLINE</span>
+								8:00 - 20:00
+							</p>
+							<p>
+								<span class="footer-tel">400-811-1797</span>
+								Shanghai Hotline
+							</p>
+							<p>
+								<span class="footer-tel">010-85310188</span>
+								Beijing Hotline
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="footer-icon2">
+							<p>
+								<span class="footer-title">MEMBER CLUB HOTLINE</span>
+								9:00 - 17:00
+							</p>
+							<p>
+								<span class="footer-tel">400-811-1796,</span>
+								Mon-Fri
+							</p>
+							<p>
+								<span class="footer-tel">15901655080,</span>
+								Sat-Sun
+							</p>
+						</td>
+					</tr>
+				</table>
+				<table id="ssl-table">
+					<tr>
+						<td>
+							<img src="images/ssl.png" alt="" />
+						</td>
+						<td>
+							<a href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&entyId=20120427165658365">
+								<img src="images/shgs.gif" alt="" />
+							</a>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<!-- End -->
+
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery.clearfield.packed.js"></script>
+	<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+	<script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+	<script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+	<script type="text/javascript" src="js/pavilionSlide.js"></script>
+	<script type="text/javascript" src="js/scroll.js"></script>
+	<script type="text/javascript" src="js/category.js"></script>
+	<!-- // <script type="text/javascript" src="js/navigator.js"></script>
+//
+<script type="text/javascript" src="js/navigatorinit.js"></script>
+-->
+<script type="text/javascript">
+		$(function(){
+			$( '.flexslider-choice' ).flexslider({
+				animation: 'slide',
+				controlNav: false,
+				itemWidth: 140,
+				itemMargin: 20,
+				slideshow: false
+			});
+
+			$( '.flexslider-cooking' ).flexslider({
+				animation: 'slide',
+				directionNav: false,
+				slideshow: false
+			});
+		})
+	</script>
+</body>
+</html>

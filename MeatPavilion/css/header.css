@@ -1,0 +1,116 @@
+#top-header {
+	height: 30px;
+	background-color: #6e1d24;
+	font-size: 12px;
+}
+
+#top-header-left {
+	float: left;
+	margin-left: 10px;
+}
+
+.smallLogo {
+	float: left;
+	margin: 5px 0;
+}
+
+.lan-select {
+	float: left;
+	margin: 7px 10px;
+}
+
+#search-form {
+	float: left;
+	height: 24px;
+	margin: 3px 0;
+}
+
+#Keywords {
+	float: left;
+	width: 120px;
+	height: 12px;
+	line-height: 12px;
+	padding: 5px 7px;
+	color: #959595;
+	border: 1px solid #6e1d24;
+}
+
+#searchCategory {
+	display: none;
+}
+
+#main_box {
+	float: left;
+	width: 145px;
+	height: 22px;
+	margin: 0 2px;
+	color: #959595;
+	background: #fff url(../images/sprite.png) no-repeat 128px -462px;
+	border: 1px solid #6e1d24;
+}
+
+#main_box .select_box span {
+	display: block;
+	height: 22px;
+	padding-left: 10px;
+	line-height: 22px;
+	cursor: pointer;
+}
+
+#main_box .son_ul {
+	display: none;
+	position: relative;
+	z-index: 9999;
+	width: 145px;
+	margin-left: -1px;
+	border: 1px solid #6e1d24;
+	background-color: #fff;
+	border-top: none;
+}
+
+#main_box .son_ul li {
+	width: 125px;
+	padding: 0 10px;
+	cursor: pointer;
+	line-height: 25px;
+}
+
+#main_box .son_ul li:hover {
+	background-color: #6e1d24;
+	color: #fff;
+}
+
+#searchBox {
+	width: 24px;
+	height: 22px;
+	margin-top: 1px;
+	background: url(../images/sprite.png) -37px -469px;
+	border: none;
+	text-indent: -9999px;
+	cursor: pointer;
+}
+
+#top-header-right { 
+	float: right;
+	margin-right: 10px;
+}
+
+#logindisplay .logonname {
+	margin: 0 10px ;
+}
+
+#logindisplay, #logindisplay a { 
+	color: #fff; 
+}
+
+#logindisplay { 
+	padding-top: 7px; 
+}
+
+#logindisplay a { 
+	margin: 0 4px; 
+}
+
+#logindisplay a:hover { 
+	color: #f7941c; 
+}

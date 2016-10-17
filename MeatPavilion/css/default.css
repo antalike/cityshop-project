@@ -1,0 +1,105 @@
+/* ------ Reset ------ */
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+img {
+	border: none;
+	vertical-align: top;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul, ol {
+	list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	font-size: 100%;
+}
+
+body {
+	background: #3b291c url(../images/meatPavilion-bg.jpg) repeat;
+	font: 62.5% Arial, Helvetica, sans-serif;
+	line-height: 100%;
+	color: #000;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.clearfix:after {
+	content:"."; 
+	display:block; 
+	height:0; 
+	visibility:hidden; 
+	clear:both; 
+}
+
+.clearfix { 
+	*zoom:1; 
+}
+
+
+/* ------ slidesjs-navigation ------ */
+
+.slides-direction {
+	position: absolute;
+	top: 360px;
+	z-index: 999;
+	display: block;
+	width: 90px;
+	height: 90px;
+	background: url(../images/sprite.png) no-repeat 0 -170px;
+	font-size: 0;
+} 
+
+.slides-next {
+	background-position: -90px -170px;
+	right: 22px;
+}
+
+.slides-prev {
+	background-position: 0 -260px;
+	left: 22px;
+}
+
+.slides-prev:hover {
+	background-position: 0 -170px;
+}
+
+/* ------ product ------ */
+
+.product-name, .product-price {
+	line-height: 1.25em;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.product-name {
+	max-height: 30px;
+	overflow: hidden;
+	margin-top: 15px;
+}
+
+.product-name a { 
+	color: #3a2115; 
+}
+
+.product-name a:hover { 
+	text-decoration: underline; 
+}
+
+.product-price { 
+	margin-top: 5px; color: #6e1d23; 
+}
